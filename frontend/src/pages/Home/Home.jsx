@@ -1,11 +1,24 @@
-import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
+import Tabs from "../../components/Tabs/tabs";
 
 const Home = () => {
+
+
+
     return (
         <>
-            <h1>Ich bin die Startseite</h1>
+            <div className="App">
 
-            <Link to={"/kontakt"}>Kontaktieren Sie uns! hallo</Link>
+                <h1>Ich bin die Startseite</h1>
+
+                <NavLink to={"/kontakt"}>Kontaktieren Sie uns! hallo</NavLink>
+
+                <Tabs />
+
+
+            </div>
+
         </>
     );
 };
