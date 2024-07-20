@@ -54,25 +54,25 @@ const Tabs = () => {
             <div className="slider-container">
 
                 {currentPage > 0 && <button className="prev" onClick={prevPageHandler} >pre</button>}
-
+                {/* 像左移动整个视口大小页面的距离 */}
                 <div className='slide-tabs' style={{ transform: `translateX(-${currentPage * 100}%)` }} >
-                    {console.log(`translateX(-${currentPage * 100}%)`)}
+                    {/* 按照每页17个图标，目前可以分成四页 */}
                     {Array.from({ length: totalPages }, (_, i) =>
                     (<div key={i} className="slide" >
-
+                        {/* 根据每页需要的图标数量，填充每页，这里是div块 */}
                         {tabLists.slice(i * iconsPrePage, (i + 1) * iconsPrePage).map((tablist, i) =>
                         (<label key={i} className="tab-item">
                             <input
                                 style={{ position: 'absolute', opacity: '0' }}
                                 type="radio"
                                 name="option"
-                                value={i}
-                                checked={selectedOption === i}
+                                value={tablist.id}
+                                checked={selectedOption === tablist.id}
                                 onChange={handleOptionChange}
                             />
                             <div className='tab-container'>
                                 <img src={tablist.image} />
-                                <span style={{ background: selectedOption === i && 'red' }} >
+                                <span style={{ background: selectedOption === tablist.id && 'red' }} >
                                     {tablist.text}
                                 </span>
                             </div>
@@ -84,8 +84,8 @@ const Tabs = () => {
                     )}
 
                 </div>
+                {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} >next</button>}
             </div>
-            {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} >next</button>}
             {/* const App = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 

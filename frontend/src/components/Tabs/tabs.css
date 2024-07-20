@@ -27,12 +27,13 @@
      width: 100%;
  } */
 
- .container {
+ /* .container {
      position: relative;
      width: 100%;
- }
+ } */
 
  .slider-container {
+     position: relative;
      overflow: hidden;
      width: 100%;
  }
@@ -40,18 +41,29 @@
  .slide-tabs {
      display: flex;
      transition: transform 0.5s ease-in-out;
-     width: 100%;
+     /* width: 100%; */
+     /* width: calc(100% * var(--total-pages)); */
+     /* 动态计算总宽度 */
  }
 
  .slide {
      display: flex;
      flex-wrap: nowrap;
      min-width: 100%;
+     /* 每个 slide 占据一个视口的宽度 */
  }
 
  .tab-item {
-     flex: 1 0 5.88%;
+     /* flex-grow (1): 项目将尝试占据可用的空间，如果有剩余空间可分配给该项目。
+flex-shrink (0): 项目不会收缩，即不会比其初始大小更小。
+flex-basis (calc(100% / 17)): 项目的初始大小设置为其父容器宽度的 1/17（即父容器宽度的 5.88%）。 */
+
      /* 每行17个img (100 / 17 ≈ 5.88%) */
+     /* flex: 1 0 calc(100% / 17); */
+     /* flex: 1 0 5.88%; */
+     /* max-width: calc(100% / 17); */
+     /* 确保每个项目不会变大 */
+     flex: 0 0 calc(100% / 17);
      box-sizing: border-box;
      text-align: center;
      padding: 10px;
