@@ -1,6 +1,8 @@
 
 import { NavLink } from "react-router-dom";
-import Tabs from "../../components/Tabs/tabs";
+import Tabs from "../../components/Tabs/Tabs";
+// import Tabs from "../../components/Tabs/tabsWithID/TabsWithID";
+
 
 const Home = () => {
 

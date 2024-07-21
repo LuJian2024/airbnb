@@ -19,46 +19,47 @@
     /* 每个 slide 占据一个视口的宽度 */
 }
 
-.tab-item {
-    /* flex-grow (1): 项目将尝试占据可用的空间，如果有剩余空间可分配给该项目。
+/* .tab-item { */
+/* flex-grow (1): 项目将尝试占据可用的空间，如果有剩余空间可分配给该项目。
      flex-grow (0):表示子元素不增长，不会试图占据更多的可用空间。即使容器有多余的空间，也不会扩展。
      flex-shrink (0): 项目不会收缩，即不会比其初始大小更小。即使容器变小，子元素的宽度也不会减少。
      flex-basis (calc(100% / 17)): 项目的初始大小设置为其父容器宽度的 1/17（即父容器宽度的 5.88%）。 */
 
-    /* version1 */
-    /* 每行17个img (100 / 17 ≈ 5.88%) */
-    /* flex: 1 0 calc(100% / 17); */
-    /* flex: 1 0 5.88%; */
-    /* max-width: calc(100% / 17); */
-    /* 确保每个项目不会变大 */
+/* version1 */
+/* 每行17个img (100 / 17 ≈ 5.88%) */
+/* flex: 1 0 calc(100% / 17); */
+/* flex: 1 0 5.88%; */
+/* max-width: calc(100% / 17); */
+/* 确保每个项目不会变大 */
 
-    /* version2 */
-    flex: 0 0 calc(100% / 17);
+/* version2 */
+/* flex: 0 0 calc(100% / 17);
 
     box-sizing: border-box;
     text-align: center;
     padding: 10px;
-}
+} */
 
-.tab-item input:checked+.tab-container {
-    cursor: default;
-}
 
-.tab-item input:checked+.tab-container img {
+
+.active img {
     background-color: #000;
-    /* cursor: default; */
 }
 
-.tab-item input:checked+.tab-container span {
+.active span {
     color: #000;
     border-bottom: 1px solid #000;
-    /* cursor: default; */
 }
 
 .tab-container {
     display: flex;
     flex-direction: column;
     /* color: #6a6a6a; */
+    flex: 0 0 calc(100% / 17);
+
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
 }
 
 .tab-container img {
@@ -87,11 +88,25 @@
 
 }
 
-.tab-item:hover span {
+.tab-container:hover span {
     color: black;
-    border-bottom: 2px solid #c4c4c4;
+    border-bottom: 2px solid #cacaca;
 }
 
+.tab-container.active {
+    cursor: default;
+}
+
+/* Ensure active state overrides hover state */
+.tab-container.active:hover img {
+    background-color: #000;
+}
+
+.tab-container.active:hover span {
+
+    color: #000;
+    border-bottom: 1px solid #000;
+}
 
 button {
     position: absolute;
@@ -100,6 +115,7 @@ button {
     z-index: 10;
     background-color: #fff;
     border: 1px solid #000;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
 }

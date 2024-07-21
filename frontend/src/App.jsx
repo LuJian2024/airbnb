@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import NotFound from "./pages/NotFound/NotFound";
 import "./css/App.css";
+import Catalog from "./pages/Catalog/Catalog";
+import DetailInfos from "./pages/DetailInfos/DetailInfos";
 
 function App() {
     return (
@@ -16,6 +18,8 @@ function App() {
                             <Route index element={<Home />} />
                             {/* Weitere Routen hier zwischen */}
                             <Route path="kontakt" element={<Kontakt />} />
+                            <Route path="catalog/:tabID/:page" element={<Catalog />} />
+                            <Route path="detail" element={<DetailInfos />} />
                             {/* Weitere Routen hier zwischen */}
                             <Route path="*" element={<NotFound />} />
                         </Route>
