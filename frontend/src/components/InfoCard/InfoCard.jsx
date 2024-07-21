@@ -1,29 +1,33 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from 'react-router-dom';
 import './InfoCard.css'
 import { useState } from 'react';
+// import { catalogCardLists } from '../../assets/catalogsdata/catalogsdata';
 
-const InfoCard = () => {
-    const images = ['/images/town1.jpg', '/images/town2.jpg', '/images/town3.jpg', '/images/town4.jpg', '/images/town5.jpg']
+const InfoCard = ({ catalogList }) => {
+    // console.log(catalogList);
     const [currentImgID, setCurrentImgID] = useState(0)
-    const [selectedOption, setSelectedOption] = useState(0)
+    // const [selectedOption, setSelectedOption] = useState(0)
 
     const prevPictureHandler = () => {
-        setCurrentImgID(prevPicture => prevPicture > 0 ? prevPicture - 1 : images.length - 1)
+        setCurrentImgID(prevPicture => prevPicture > 0 ? prevPicture - 1 : catalogList.image.length - 1)
     }
     const nextPictureHandler = () => {
-        setCurrentImgID(prevPicture => prevPicture < images.length - 1 ? prevPicture + 1 : 0)
+        setCurrentImgID(prevPicture => prevPicture < catalogList.image.length - 1 ? prevPicture + 1 : 0)
     }
-    const handleOptionChange = (id) => {
-        setSelectedOption(id)
-    }
+    // const handleOptionChange = (id) => {
+    //     setSelectedOption(id)
+    // }
     return (
-        // <NavLink to="/detail">
+
         <div className="carousel-container">
             <div className="carousel-img">
                 <button className='prev-img' onClick={prevPictureHandler} >prev</button>
-                {images.map((imgItem, i) =>
+                {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
-                    <img src={imgItem} />
+                    <NavLink to="/detail">
+                        <img src={imgItem} />
+                    </NavLink>
                 </div>))}
                 <button className='next-img' onClick={nextPictureHandler} >next</button>
                 <ul className='carousel-dots'>
@@ -32,14 +36,16 @@ const InfoCard = () => {
                     )}
                 </ul>
             </div>
-            <div className="carousel-text">
-                <h3>Gaular Norway</h3>
-                <p>1,267 kilometers away</p>
-                <p>Aug 9-14</p>
-                <h3>price<span>night</span></h3>
-            </div>
+            <NavLink to="/detail">
+                <div className="carousel-text">
+                    <h3>{catalogList.place}</h3>
+                    <p>{catalogList.distance}</p>
+                    <p>{catalogList.date}</p>
+                    <h3>{catalogList.price} <span>night</span></h3>
+                </div>
+            </NavLink >
         </div>
-        // </NavLink>
+
     );
 }
 

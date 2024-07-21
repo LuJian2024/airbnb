@@ -48,11 +48,9 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
     //     setSelectedOption(selectedTab);
     //     if (selectedTab > 0) {
     //         navigate(`/catalog/${selectedTab}`);
-
     //     } else {
     //         navigate("/");
     //     }
-
     // };
 
     const handleOptionChange = (event) => {
@@ -61,11 +59,9 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
         setSelectedOption(selectedTab);
         if (selectedTab > 0) {
             navigate(`/catalog/${selectedTab}/${newPage}`);
-
         } else {
             navigate("/");
         }
-
     };
 
     // debugger
@@ -111,13 +107,13 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
 
                     </div>)
                     )}
-
                 </div>
+
                 {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} >next</button>}
 
             </div>
 
-            <div>Selected Option: {selectedOption}</div>
+            {/* <div>Selected Option: {selectedOption}</div> */}
         </div >
 
 
