@@ -25,7 +25,7 @@ const InfoCard = ({ catalogList }) => {
                 <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>
                 {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
-                    <NavLink to="/detail">
+                    <NavLink to="/detail" target="_blank" rel="noopener noreferrer">
                         <img src={imgItem} />
                     </NavLink>
                 </div>))}
@@ -36,7 +36,8 @@ const InfoCard = ({ catalogList }) => {
                     )}
                 </ul>
             </div>
-            <NavLink to="/detail">
+            {/* target="_blank": 使链接在新标签页中打开。rel="noopener noreferrer": 安全性属性，防止新页面获取对原页面的引用，推荐在使用target="_blank"时加上。 */}
+            <NavLink to="/detail" target="_blank" rel="noopener noreferrer">
                 <div className="carousel-text">
                     <h3>{catalogList.place}</h3>
                     <p>{catalogList.distance}</p>
