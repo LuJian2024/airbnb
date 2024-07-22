@@ -1,5 +1,6 @@
 
 // import { NavLink } from "react-router-dom";
+import MainInfoCard from "../../components/MainInfoCard/MainInfoCard";
 import Tabs from "../../components/Tabs/Tabs";
 // import Header1 from "../../components/Header1/Header1";
 // import Tabs from "../../components/Tabs/tabsWithID/TabsWithID";
@@ -20,6 +21,7 @@ const Home = () => {
                 <NavLink to={"/kontakt"}>Kontaktieren Sie uns! hallo</NavLink> */}
 
                 <Tabs />
+                <MainInfoCard />
 
 
             </div>

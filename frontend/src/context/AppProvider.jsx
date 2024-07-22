@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import React, { useReducer, useState } from "react";
+import { useState } from "react";
 
 export const AppContext = React.createContext();
 
@@ -36,10 +38,15 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  const [state, setState] = useState({});
   return (
-    <AppContext.Provider value={{ ...state, setLogin2Active }}>
-      {children}
-    </AppContext.Provider>
+    (
+      <AppContext.Provider value={{ state, setState  ...state, setLogin2Active }}>
+
+        {children}
+
+      </AppContext.Provider>
+    )
   );
 };
 

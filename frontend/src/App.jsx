@@ -2,6 +2,7 @@ import AppProvider from "./context/AppProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SharedLayout from "./pages/SharedLayout";
 import Home from "./pages/Home/Home";
+import DetailPage from "./pages/DetailPage";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import NotFound from "./pages/NotFound/NotFound";
 import "./css/App.css";
