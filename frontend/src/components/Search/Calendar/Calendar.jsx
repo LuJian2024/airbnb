@@ -78,6 +78,14 @@ const CalendarComponent = () => {
                     </CalendarGrid>
                 </div>
             </RangeCalendar>
+            <div className="add-dates-bar">
+                <div>Exact dates</div>
+                <div>+-1day</div>
+                <div>+-2days</div>
+                <div>+-3days</div>
+                <div>+-7days</div>
+                <div>+-14days</div>
+            </div>
         </div>
     );
 };

@@ -7,30 +7,60 @@ const Destinations = () => {
                 <p>Search by region</p>
                 <div className="grid-destinations">
                     <div className="grid-item">
-                        <div className="grid-img"></div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/world-map.png"
+                                alt="map"
+                            />
+                        </div>
                         <div className="grid-text">
                             <p>I’m flexible</p>
                         </div>
                     </div>
                     <div className="grid-item">
-                        <div className="grid-img"></div>
-                        <div className="grid-text">Southeast Asia</div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/asia-map.png"
+                                alt="map"
+                            />
+                        </div>
+                        <div className="grid-text">Asia</div>
                     </div>
                     <div className="grid-item">
-                        <div className="grid-img"></div>
-                        <div className="grid-text">Spain</div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/ukraine-map.png"
+                                alt="map"
+                            />
+                        </div>
+                        <div className="grid-text">Ukraine</div>
                     </div>
                     <div className="grid-item">
-                        <div className="grid-img"></div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/usa-map.png"
+                                alt="map"
+                            />
+                        </div>
                         <div className="grid-text">United States</div>
                     </div>
 
                     <div className="grid-item">
-                        <div className="grid-img"></div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/italy-map.png"
+                                alt="map"
+                            />
+                        </div>
                         <div className="grid-text">Italy</div>
                     </div>
                     <div className="grid-item">
-                        <div className="grid-img"></div>
+                        <div className="grid-img">
+                            <img
+                                src="public/images/searchMaps/afrika-map.png"
+                                alt="map"
+                            />
+                        </div>
                         <div className="grid-text">Afrika</div>
                     </div>
                 </div>
