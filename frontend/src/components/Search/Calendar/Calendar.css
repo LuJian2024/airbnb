@@ -71,3 +71,24 @@
     border-color: transparent;
     cursor: default;
 }
+
+.add-dates-bar {
+    display: flex;
+    width: 800px;
+    height: 48px;
+    gap: 10px;
+    padding: 20px 40px;
+}
+.add-dates-bar > div {
+    width: 94px;
+    height: 32px;
+    border-radius: 32px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-dates-bar > div:hover {
+    border-color: black;
+}
