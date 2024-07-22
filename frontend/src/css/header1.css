@@ -1,22 +1,25 @@
-.header1{
+.header1 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    
-   }
-   .dropdown-menu.active{
-    opacity: 1; 
+
+}
+
+.dropdown-menu.active {
+    opacity: 1;
     visibility: visible;
     /* transform: translateY(0);
     transition: var(--speed) ease; */
-   }
-   .dropdown-menu.inactive{
+}
+
+.dropdown-menu.inactive {
     opacity: 0;
     visibility: hidden;
     /* transform: translateY(-20px);
     transition: var(--speed) ease; */
-   }
-   .drop{
+}
+
+.drop {
     width: 250px;
     height: 250px;
     border: 1px solid rgb(189, 185, 185);
@@ -29,100 +32,118 @@
     background-color: aliceblue;
     list-style-type: none;
     z-index: 2;
-   }
-   .drop button{
+}
+
+.drop button {
     background-color: inherit;
     border: none;
     font-size: larger;
     padding: 10px;
     cursor: pointer;
-   }
-   .drop button:hover{
+}
+
+.drop button:hover {
     background-color: rgb(243, 242, 242);
-   }
-.air{ 
+}
+
+.air {
     display: flex;
     margin: 5px;
     gap: 19px;
     padding-top: 22px;
 }
-.air-logo{
+
+.air-logo {
     width: 100px;
     cursor: pointer;
     padding-top: 25px;
 }
-.header1 button{
+
+.header1 button {
     border: none;
     background-color: inherit;
     font-size: larger;
     cursor: pointer;
     padding: 8px;
 }
+
 .header1 button:hover {
     background-color: rgb(239, 235, 235);
     border-radius: 50px;
-  
+
 }
-.plant img{
-  width: 45px;
-  border-radius: 50px;
-  margin: -7px;
+
+.plant img {
+    width: 45px;
+    border-radius: 50px;
+    margin: -7px;
 }
-#your-home{
+
+#your-home {
     position: relative;
     top: -25px;
     font-size: 16px;
 }
-.login{
-    
+
+.login {
+
     border-radius: 50px;
     margin: -7px;
 }
-.close{
+
+.close {
     background-color: inherit;
     border: none;
 }
-.sing-up-body{
+
+.sign-up-body {
     position: absolute;
     margin: 0 auto;
     transform: translateX(75%);
-   z-index: 30;
+    z-index: 30;
     background-color: rgb(246, 244, 238);
     width: 35%;
     border-radius: 15px;
 }
-.sing-up-body header{
+
+.sign-up-body header {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-.sing-up-body input{
+
+.sign-up-body input {
     width: 100%;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid rgb(189, 185, 185);
-    
-} 
-.input-body{
-padding: 30px;
-  
+
 }
-.continue-button{
+
+.input-body {
+    padding: 30px;
+
+}
+
+.continue-button {
     width: 100%;
     padding: 15px;
     margin: 8px;
-cursor: pointer;
+    cursor: pointer;
 
 }
-.continue-button a{
-   text-decoration: none;
-   color: black;
+
+.continue-button a {
+    text-decoration: none;
+    color: black;
 }
-.sing-up-menu.an{
-    opacity: 1; 
+
+.sign-up-menu.an {
+    opacity: 1;
     visibility: visible;
 }
-.sing-up-menu.off{
-    opacity: 0; 
+
+.sign-up-menu.off {
+    opacity: 0;
     visibility: hidden;
 }

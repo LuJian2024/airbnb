@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import "../../css/header1.css"
+
+
 export default function Header1() {
   const[open, setOpen] = useState(false);
   const [login, setLogin]= useState(false);
@@ -31,7 +33,7 @@ export default function Header1() {
             {/* <DropdownItem /> */}
             <div className='drop'>
   <div className='dropdownItem'>
-  <button onClick={()=>{setLogin(!login) }}><b>Sing up</b></button><br />
+  <button onClick={()=>{setLogin(!login) }}><b>sign up</b></button><br />
   <button onClick={()=>{setLogin(!login)}}> Log in</button>
   <p style={{ color:"rgb(189, 185, 185)", padding: "0"}}>
     ___________________________________</p>
@@ -42,8 +44,8 @@ export default function Header1() {
     </div>
     </div>
           </div>
-          <div className={`sing-up-menu ${login? `an` : `off`}`}>
-            <SingUp />
+          <div className={`sign-up-menu ${login? `an` : `off`}`}>
+            {login === true && <SignUp />}
           </div>
           {/* <SpracheItem /> */}
     </>
@@ -52,7 +54,7 @@ export default function Header1() {
 // function DropdownItem() {
 //   return (<> <div className='drop'>
 //   <div className='dropdownItem'>
-//   <button><b>Sing up</b></button><br />
+//   <button><b>sign up</b></button><br />
 //   <button> Log in</button>
 //   <p style={{width:"100%", color:"rgb(189, 185, 185)", padding: "0"}}>
 //     ___________________________________</p>
@@ -82,13 +84,13 @@ function SpracheItem (){
     </>
   )
 }
-//-----Sing Up------------------------------
-function SingUp (){
+//-----sign up------------------------------
+function SignUp (){
   return(
-    <><div className='sing-up-body'>
+    <><div className='sign-up-body'>
       <header>
         <button className='close' ><FontAwesomeIcon icon={faXmark} /></button>
-        <h3>Log In or sing up</h3>
+        <h3>Log In or sign up</h3>
       </header>
       <p style={{color:"rgb(189, 185, 185)"}}>_____________________________________________________________________________</p>
     <div className='input-body'>
