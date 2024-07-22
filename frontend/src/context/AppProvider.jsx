@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useReducer, useState } from "react";
-import { useState } from "react";
+
 
 export const AppContext = React.createContext();
 
@@ -26,22 +26,22 @@ const reducer = (state, action) => {
 };
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  // const [state, dispatch] = useReducer(reducer, initialState);
 
-  const setLogin2Active = (active) => {
-    console.log("active");
-    console.log(active);
-    console.log("");
+  // const setLogin2Active = (active) => {
+  //   console.log("active");
+  //   console.log(active);
+  //   console.log("");
 
-    if (active) {
-      dispatch({ type: SET_LOGIN2_ACTIVE, payload: active });
-    }
-  };
+  //   if (active) {
+  //     dispatch({ type: SET_LOGIN2_ACTIVE, payload: active });
+  //   }
+  // };
 
   const [state, setState] = useState({});
   return (
     (
-      <AppContext.Provider value={{ state, setState  ...state, setLogin2Active }}>
+      <AppContext.Provider value={{ state, setState }}>
 
         {children}
 

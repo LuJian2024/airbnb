@@ -148,7 +148,7 @@ const MainInfoCard = () => {
 
   return (
     <>
-      <h1>Ich bin die Startseite</h1>
+
       <div className="main-content">
         <div className="photo-grid">
           {photos.map((photo, index) => (
