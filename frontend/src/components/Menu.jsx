@@ -87,7 +87,10 @@ export default function Header1() {
           {/* <DropdownItem /> */}
           <div className="drop">
             <div className="dropdownItem">
-              <button onClick={() => {}}>
+              <button onClick={() => {
+                setHamburgerActive(false);
+                setLogin2Active(true);
+              }}>
                 <b>sign up</b>
               </button>
               <br />
