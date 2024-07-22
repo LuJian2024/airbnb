@@ -22,11 +22,13 @@
     border: 1px solid rgb(189, 185, 185);
     border-radius: 10px;
     width: 280px;
-    position: relative;
+    position: absolute;
     display: flex;
-    right: -1610px;
-    top: -30px;
+    right: 20px;
+    top: 100px;
+    background-color: aliceblue;
     list-style-type: none;
+    z-index: 2;
    }
    .drop button{
     background-color: inherit;
@@ -63,18 +65,62 @@
 }
 .plant img{
   width: 45px;
+  border-radius: 50px;
+  margin: -7px;
 }
 #your-home{
     position: relative;
     top: -25px;
     font-size: 16px;
 }
-
-.dropdownItem{
-
-}
-img{
+.login{
+    
     border-radius: 50px;
     margin: -7px;
-   
+}
+.close{
+    background-color: inherit;
+    border: none;
+}
+.sing-up-body{
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(246, 244, 238);
+    width: 35%;
+    border-radius: 15px;
+}
+.sing-up-body header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.sing-up-body input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(189, 185, 185);
+    
+} 
+.input-body{
+padding: 30px;
+  
+}
+.continue-button{
+    width: 100%;
+    padding: 15px;
+    margin: 8px;
+cursor: pointer;
+
+}
+.continue-button a{
+   text-decoration: none;
+   color: black;
+}
+.sing-up-menu.an{
+    opacity: 1; 
+    visibility: visible;
+}
+.sing-up-menu.off{
+    opacity: 0; 
+    visibility: hidden;
 }

@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <>
             <h1>Ich bin die Startseite</h1>
-            <Link to={"/card"}>nach karte bild!</Link><br />
+            <Link to={"/header1"}>nach karte bild!</Link><br />
             <Link to={"/kontakt"}>Kontaktieren Sie uns!</Link>
         </>
     );
