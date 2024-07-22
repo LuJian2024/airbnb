@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import NotFound from "./pages/NotFound/NotFound";
 import "./css/App.css";
-import Header1 from "./components/Header1/Header1";
+// import Header1 from "./components/Header1/Header1";
 import Catalog from "./pages/Catalog/Catalog";
 import DetailInfos from "./pages/DetailInfos/DetailInfos";
 
@@ -15,7 +15,7 @@ function App() {
             <AppProvider>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="header1" element={<Header1 />} />
+                        {/* <Route path="header1" element={<Header1 />} /> */}
                         <Route path="/" element={<SharedLayout />}>
                             <Route index element={<Home />} />
                             {/* Weitere Routen hier zwischen */}

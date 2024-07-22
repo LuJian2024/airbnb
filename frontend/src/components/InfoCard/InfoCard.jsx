@@ -22,14 +22,14 @@ const InfoCard = ({ catalogList }) => {
 
         <div className="carousel-container">
             <div className="carousel-img">
-                <button className='prev-img' onClick={prevPictureHandler} >prev</button>
+                <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>
                 {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
                     <NavLink to="/detail">
                         <img src={imgItem} />
                     </NavLink>
                 </div>))}
-                <button className='next-img' onClick={nextPictureHandler} >next</button>
+                <button className='next-img' onClick={nextPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowRight.svg' /></button>
                 <ul className='carousel-dots'>
                     {Array(5).fill('').map((_, i) =>
                         <li key={i} className={i === currentImgID ? 'active-dot' : ''}></li>

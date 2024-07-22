@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import { tabsImg, tabsText } from '../../assets/tabsdata/tabsdata';
 import './tabs.css'
 import { useLocation, useNavigate } from 'react-router-dom';
+import '/svg/arrowRight.svg'
+import '/svg/arrowLeft.svg'
+
 const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
 
     const [selectedOption, setSelectedOption] = useState(initialTabID);
@@ -77,7 +80,7 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
 
             <div className="slider-container">
 
-                {currentPage > 0 && <button className="prev" onClick={prevPageHandler} >pre</button>}
+                {currentPage > 0 && <button className="prev" onClick={prevPageHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>}
                 {/* 像左移动整个视口大小页面的距离 */}
                 <div className='slide-tabs' style={{ transform: `translateX(-${currentPage * 100}%)` }} >
                     {/* 按照每页17个图标，目前可以分成四页 */}
@@ -109,7 +112,7 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
                     )}
                 </div>
 
-                {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} >next</button>}
+                {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} ><img style={{ width: '12px' }} src='/svg/arrowRight.svg' /></button>}
 
             </div>
 

@@ -25,11 +25,15 @@
     border: 1px solid rgb(189, 185, 185);
     border-radius: 10px;
     width: 280px;
-    position: relative;
+    position: absolute;
+    /* position: relative; */
     display: flex;
-    right: -1610px;
-    top: -30px;
+    /* right: -1610px; */
+    right: 0px;
+    top: 130px;
     list-style-type: none;
+    z-index: 100;
+    background: white;
 }
 
 .drop button {
@@ -73,6 +77,8 @@
 
 .plant img {
     width: 45px;
+    border-radius: 50px;
+    margin: -7px;
 }
 
 #your-home {
@@ -81,10 +87,7 @@
     font-size: 16px;
 }
 
-.dropdownItem {}
-
-/* img {
+.login {
     border-radius: 50px;
     margin: -7px;
-
-} */
+}
