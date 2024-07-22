@@ -39,9 +39,10 @@ const AppProvider = ({ children }) => {
   // };
 
   const [state, setState] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null)
   return (
     (
-      <AppContext.Provider value={{ state, setState }}>
+      <AppContext.Provider value={{ state, setState, selectedImage, setSelectedImage }}>
 
         {children}
 

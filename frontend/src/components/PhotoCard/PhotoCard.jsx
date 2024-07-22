@@ -1,10 +1,17 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./PhotoCard.css";
+import { NavLink } from "react-router-dom";
+import { AppContext } from "../../context/AppProvider";
 
 const PhotoCard = ({ photo, title, personName, date, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { setSelectedImage } = useContext(AppContext)
 
+  const imageClickHandler = (imgItem) => {
+    setSelectedImage(imgItem)
+    localStorage.setItem('selectedImage', imgItem) //use localStorage
+  }
   return (
     <div
       className={`photo-card ${isHovered ? "hovered" : ""}`}
@@ -12,7 +19,11 @@ const PhotoCard = ({ photo, title, personName, date, onClick }) => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
-      <img src={photo} alt={title} />
+      {/* click picture to link to detail-page */}
+      <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)} >
+        <img src={photo} alt={title} />
+      </NavLink>
+
       {isHovered && (
         <div className="download-icon">
           <span>

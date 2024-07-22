@@ -17,11 +17,10 @@ function App() {
       <AppProvider>
         <BrowserRouter>
           <Routes>
-            {/* <Route path="header1" element={<Header1 />} /> */}
             <Route path="/" element={<SharedLayout />}>
               <Route index element={<Home />} />
               {/* Weitere Routen hier zwischen */}
-              <Route path="kontakt" element={<Kontakt />} />
+              {/* <Route path="kontakt" element={<Kontakt />} /> */}
               <Route path="catalog/:tabID/:page" element={<Catalog />} />
               <Route path="detail" element={<DetailInfos />} />
               {/* Weitere Routen hier zwischen */}

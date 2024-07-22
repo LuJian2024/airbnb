@@ -1,13 +1,20 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './InfoCard.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../../context/AppProvider';
 // import { catalogCardLists } from '../../assets/catalogsdata/catalogsdata';
 
 const InfoCard = ({ catalogList }) => {
-    // console.log(catalogList);
+    const { setSelectedImage } = useContext(AppContext)
+    // const navigate = useNavigate()
     const [currentImgID, setCurrentImgID] = useState(0)
+
     // const [selectedOption, setSelectedOption] = useState(0)
+
+    // const handleOptionChange = (id) => {
+    //     setSelectedOption(id)
+    // }
 
     const prevPictureHandler = () => {
         setCurrentImgID(prevPicture => prevPicture > 0 ? prevPicture - 1 : catalogList.image.length - 1)
@@ -15,19 +22,26 @@ const InfoCard = ({ catalogList }) => {
     const nextPictureHandler = () => {
         setCurrentImgID(prevPicture => prevPicture < catalogList.image.length - 1 ? prevPicture + 1 : 0)
     }
-    // const handleOptionChange = (id) => {
-    //     setSelectedOption(id)
-    // }
-    return (
+    const imageClickHandler = (imgItem) => {
+        setSelectedImage(imgItem)
+        // navigate('/detail')
+        localStorage.setItem('selectedImage', imgItem) // 使用 localStorage
+    }
 
+    return (
         <div className="carousel-container">
             <div className="carousel-img">
                 <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>
                 {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
-                    <NavLink to="/detail" target="_blank" rel="noopener noreferrer">
+                    {/* 如果需要在新标签页打开链接，同时保持上下文状态，可以使用一种不同的方式来处理上下文数据传递。一个常见的解决方案是在点击时使用 localStorage 或 sessionStorage 存储选定的图片，然后在新标签页中读取这个数据。使用 localStorage 或 sessionStorage在点击图片时存储数据：在 InfoCard 组件中，点击图片时将数据存储到 localStorage 或 sessionStorage。在新标签页加载时读取数据：在 DetailInfos 组件中，加载时从 localStorage 或 sessionStorage 读取数据。 */}
+                    {/* target="_blank" rel="noopener noreferrer" */}
+                    <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(imgItem)} >
                         <img src={imgItem} />
                     </NavLink>
+                    {/* <button onClick={() => imageClickHandler(imgItem)}>
+                        <img src={imgItem} alt="catalog" />
+                    </button> */}
                 </div>))}
                 <button className='next-img' onClick={nextPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowRight.svg' /></button>
                 <ul className='carousel-dots'>
@@ -46,7 +60,6 @@ const InfoCard = ({ catalogList }) => {
                 </div>
             </NavLink >
         </div>
-
     );
 }
 

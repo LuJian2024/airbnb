@@ -14,6 +14,12 @@
     margin-top: 20px;
 }
 
+.single-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .text-details {
     display: flex;
     gap: 50px;
