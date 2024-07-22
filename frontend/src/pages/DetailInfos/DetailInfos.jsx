@@ -28,7 +28,7 @@ const DetailInfos = () => {
     return (
         <div className="details-container">
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
-                <h1>The street scenery that leaves you longing to linger</h1>
+                <h1>The picture that leaves you longing to linger</h1>
                 <div className="share-save" style={{ display: 'flex', gap: '15px' }} >
                     <NavLink >
                         <img src='/svg/share.svg' style={{ width: '16px' }} />
