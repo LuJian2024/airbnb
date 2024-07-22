@@ -13,7 +13,7 @@ const Home = () => {
             <div className="App">
 
                 <h1>Ich bin die Startseite</h1>
-
+                <Link to={"/card"}>nach karte bild!</Link><br />
                 <NavLink to={"/kontakt"}>Kontaktieren Sie uns! hallo</NavLink>
 
                 <Tabs />
