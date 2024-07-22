@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import "./Modal.css";
 
 // const Modal = ({ isOpen, onClose, title, content }) => {
@@ -28,7 +29,7 @@
 
 import "./Modal.css";
 
-const Modal = ({ isOpen, onClose, title, photo, content }) => {
+const Modal = ({ isOpen, onClose, title, photo }) => {
   if (!isOpen) return null;
 
   return (
@@ -41,12 +42,12 @@ const Modal = ({ isOpen, onClose, title, photo, content }) => {
             width="64px"
             height="64px"
             style={{ border: "1px solid transparent", borderRadius: "5px" }}
+            // src={"./images/kevin-hart.webp"}
             src={photo}
             alt="kevin-hart-photo"
           />
           <h2>{title}</h2>
         </div>
-        {/* <p>{content}</p> */}
         <div className="button-container">
           <div className="button-row">
             <button className="btn">

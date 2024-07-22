@@ -131,10 +131,14 @@ const pastPhotos = [
 
 const MainInfoCard = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({ title: "", content: "" });
+  const [modalContent, setModalContent] = useState({
+    title: "",
+    content: "",
+    photo: "",
+  });
 
-  const openModal = (title, content) => {
-    setModalContent({ title, content });
+  const openModal = (title, content, photo) => {
+    setModalContent({ title, content, photo });
     setModalOpen(true);
   };
 
@@ -157,7 +161,8 @@ const MainInfoCard = () => {
               onClick={() =>
                 openModal(
                   photo.title,
-                  "Hier ist der Detailinhalt für " + photo.title
+                  "Hier ist der Detailinhalt für " + photo.title,
+                  photo.photo
                 )
               }
             />
@@ -175,7 +180,8 @@ const MainInfoCard = () => {
               onClick={() =>
                 openModal(
                   photo.title,
-                  "Hier ist der Detailinhalt für " + photo.title
+                  "Hier ist der Detailinhalt für " + photo.title,
+                  photo.photo
                 )
               }
             />
@@ -186,6 +192,7 @@ const MainInfoCard = () => {
           onClose={closeModal}
           title={modalContent.title}
           content={modalContent.content}
+          photo={modalContent.photo}
         />
       </div>
     </>
