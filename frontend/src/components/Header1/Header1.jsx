@@ -31,7 +31,7 @@ export default function Header1() {
             {/* <DropdownItem /> */}
             <div className='drop'>
   <div className='dropdownItem'>
-  <button onClick={()=>{setLogin(!login)}}><b>Sing up</b></button><br />
+  <button onClick={()=>{setLogin(!login) }}><b>Sing up</b></button><br />
   <button onClick={()=>{setLogin(!login)}}> Log in</button>
   <p style={{ color:"rgb(189, 185, 185)", padding: "0"}}>
     ___________________________________</p>

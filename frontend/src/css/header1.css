@@ -83,8 +83,10 @@
     border: none;
 }
 .sing-up-body{
-    position: relative;
+    position: absolute;
     margin: 0 auto;
+    transform: translateX(75%);
+   z-index: 30;
     background-color: rgb(246, 244, 238);
     width: 35%;
     border-radius: 15px;
