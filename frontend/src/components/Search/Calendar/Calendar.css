@@ -37,46 +37,37 @@
 }
 
 .react-aria-CalendarCell {
-    width: 2.286rem;
-    line-height: 2.286rem;
+    width: 3rem;
+    line-height: 3rem;
     text-align: center;
     border-radius: 6px;
     cursor: default;
     outline: none;
     forced-color-adjust: none;
     margin: 7px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
 }
-
 .react-aria-CalendarCell[data-outside-month] {
     display: none;
 }
 
-.react-aria-CalendarCell[data-pressed] {
-    background: rgb(55, 155, 189);
-}
-
-.react-aria-CalendarCell[data-focus-visible] {
-    outline: 2px solid var(--highlight-background);
-    outline-offset: -2px;
-}
-
 .react-aria-CalendarCell[data-selected] {
-    background: blue;
-    /* color: var(--highlight-foreground); */
-    border-radius: 0;
+    background: black;
+    color: white;
+    border-radius: 50%;
 }
 
-.react-aria-CalendarCell[data-focus-visible] {
-    outline-color: var(--highlight-foreground);
-    outline-offset: -3px;
+.react-aria-CalendarCell:hover {
+    border-color: black;
 }
 
-.react-aria-CalendarCell[data-selection-start] {
-    border-start-start-radius: 6px;
-    border-end-start-radius: 6px;
+.react-aria-CalendarCell[data-disabled] {
+    color: rgb(211, 209, 209);
 }
 
-.react-aria-CalendarCell[data-selection-end] {
-    border-start-end-radius: 6px;
-    border-end-end-radius: 6px;
+.react-aria-CalendarCell[data-disabled]:hover {
+    border-color: transparent;
+    cursor: default;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Calendar.css";
 import { parseDate } from "@internationalized/date";
+import { today, getLocalTimeZone } from "@internationalized/date";
 
 import {
     Button,
@@ -11,9 +12,25 @@ import {
 } from "react-aria-components";
 
 const CalendarComponent = () => {
+    /* const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const formattedToday = `${today.getFullYear()}-${String(
+        today.getMonth() + 1
+    ).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+    const formattedTomorrow = `${tomorrow.getFullYear()}-${String(
+        tomorrow.getMonth() + 1
+    ).padStart(2, "0")}-${String(tomorrow.getDate()).padStart(2, "0")}`;
+
     const [fromToDates, setFromToDates] = useState({
-        start: parseDate("2024-07-19"),
-        end: parseDate("2024-07-20"),
+        start: parseDate(formattedToday),
+        end: parseDate(formattedTomorrow),
+    }); */
+
+    const [fromToDates, setFromToDates] = useState({
+        start: today(getLocalTimeZone()),
+        end: today(getLocalTimeZone()).add({ weeks: 0, days: 1 }),
     });
 
     console.log("fromToDates", fromToDates);
@@ -31,6 +48,7 @@ const CalendarComponent = () => {
                 pageBehavior="single"
                 value={fromToDates}
                 onChange={setFromToDates}
+                minValue={today(getLocalTimeZone())}
             >
                 <header>
                     <Button slot="previous" className="react-aria-Button">
