@@ -123,6 +123,7 @@
 .input-body {
     padding: 30px;
 
+
 }
 
 .continue-button {
@@ -138,7 +139,7 @@
     color: black;
 }
 
-.sign-up-menu.an {
+.sign-up-menu.on {
     opacity: 1;
     visibility: visible;
 }

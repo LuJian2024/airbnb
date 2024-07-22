@@ -44,7 +44,7 @@ export default function Header1() {
     </div>
     </div>
           </div>
-          <div className={`sign-up-menu ${login? `an` : `off`}`}>
+          <div className={`sign-up-menu ${login? `on` : `off`}`}>
             {login === true && <SignUp />}
           </div>
           {/* <SpracheItem /> */}
