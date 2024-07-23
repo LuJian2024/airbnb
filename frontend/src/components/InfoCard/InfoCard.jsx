@@ -6,8 +6,10 @@ import { AppContext } from '../../context/AppProvider';
 // import { catalogCardLists } from '../../assets/catalogsdata/catalogsdata';
 
 const InfoCard = ({ catalogList }) => {
-    const { setSelectedImage } = useContext(AppContext)
+    // Using "localStorage" makes it unnecessary to use "useContext", otherwise "useContext" must be used to transfer the selected image.  
+    // const { setSelectedImage } = useContext(AppContext)
     // const navigate = useNavigate()
+
     const [currentImgID, setCurrentImgID] = useState(0)
 
     // const [selectedOption, setSelectedOption] = useState(0)
@@ -23,8 +25,10 @@ const InfoCard = ({ catalogList }) => {
         setCurrentImgID(prevPicture => prevPicture < catalogList.image.length - 1 ? prevPicture + 1 : 0)
     }
     const imageClickHandler = (imgItem) => {
-        setSelectedImage(imgItem)
+        // setSelectedImage(imgItem)
+        // console.log(imgItem);
         // navigate('/detail')
+        localStorage.setItem('imageList', JSON.stringify(catalogList.image)); // 存储整个图片数组
         localStorage.setItem('selectedImage', imgItem) // 使用 localStorage
     }
 
@@ -34,8 +38,8 @@ const InfoCard = ({ catalogList }) => {
                 <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>
                 {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
-                    {/* 如果需要在新标签页打开链接，同时保持上下文状态，可以使用一种不同的方式来处理上下文数据传递。一个常见的解决方案是在点击时使用 localStorage 或 sessionStorage 存储选定的图片，然后在新标签页中读取这个数据。使用 localStorage 或 sessionStorage在点击图片时存储数据：在 InfoCard 组件中，点击图片时将数据存储到 localStorage 或 sessionStorage。在新标签页加载时读取数据：在 DetailInfos 组件中，加载时从 localStorage 或 sessionStorage 读取数据。 */}
-                    {/* target="_blank" rel="noopener noreferrer" */}
+                    {/* 如果需要在新标签页打开链接，同时保持上下文状态，可以使用一种不同的方式来处理上下文数据传递。一个常见的解决方案是在点击时使用 localStorage 或 sessionStorage 存储选定的图片，然后在新标签页中读取这个数据。使用这种方法则无需使用useContext. 使用 localStorage 或 sessionStorage在点击图片时存储数据：在 InfoCard 组件中，点击图片时将数据存储到 localStorage 或 sessionStorage。在新标签页加载时读取数据：在 DetailInfos 组件中，加载时从 localStorage 或 sessionStorage 读取数据。 */}
+                    {/* target="_blank" rel="noopener noreferrer" 如果不用在新标签页中打开链接，则可以直接使用useContext传递参数，无需使用localStorage. */}
                     <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(imgItem)} >
                         <img src={imgItem} />
                     </NavLink>

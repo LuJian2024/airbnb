@@ -105,18 +105,18 @@
     cursor: pointer;
 }
 
-button:hover {
+.slider-container button:hover {
     background-color: #f0f0f0;
 }
 
-button:active {
+.slider-container button:active {
     background-color: #ccc;
 }
 
-button.prev {
+.slider-container button.prev {
     left: 0;
 }
 
-button.next {
+.slider-container button.next {
     right: 0;
 }

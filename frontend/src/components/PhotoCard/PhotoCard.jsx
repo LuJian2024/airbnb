@@ -11,6 +11,7 @@ const PhotoCard = ({ photo, title, personName, date, onClick }) => {
   const imageClickHandler = (imgItem) => {
     setSelectedImage(imgItem)
     localStorage.setItem('selectedImage', imgItem) //use localStorage
+    localStorage.setItem('imageList', JSON.stringify('')); //Forcibly set to null to select only the current image
   }
   return (
     <div
