@@ -113,15 +113,14 @@ export default function Header1() {
         
           <div className="sign-up-body">
             <header>
-              <button style={{fontSize:"25px",}}
+              <button style={{position:"relative",left:"20px",top:"20px"}}
                 onClick={() => {
                   console.log("happening");
 
                   setLogin2Active(false);
                 }}
-                className="close"
-              >
-                <FontAwesomeIcon style={{position:"relative",left:"20px",top:"20px"}} icon={faXmark} />
+                className="close">
+                <FontAwesomeIcon  icon={faXmark} />
               </button>
               <h3 style={{textAlign:"center",position:"relative",top:"-5px"}}>Log in or sign up</h3>
             </header>
