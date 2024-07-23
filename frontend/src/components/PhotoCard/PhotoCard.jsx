@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./PhotoCard.css";
+import MainCarousel from "../MainCarousel/MainCarousel";
 
-const PhotoCard = ({ photo, title, personName, date, onClick }) => {
+const PhotoCard = ({ photo, title, personName, date, carouselImages, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -10,9 +11,19 @@ const PhotoCard = ({ photo, title, personName, date, onClick }) => {
       className={`photo-card ${isHovered ? "hovered" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      // onClick={onClick}
+
+    // onClick={onClick}
     >
-      <img src={photo} alt={title} />
+      {console.log(carouselImages)}
+      {/* here sollt stellt MainCarousel, nicht in MainInfoCard */}
+      {carouselImages ? (
+        <div>
+          <h2>{photo.title}</h2>
+          <MainCarousel images={carouselImages} />
+        </div>
+      ) : (
+        <img src={photo} alt={title} />)}
+
       {/* {isHovered && ( */}
       <div className="download-icon" onClick={onClick}>
         <span>

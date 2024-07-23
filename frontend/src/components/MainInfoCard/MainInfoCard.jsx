@@ -168,27 +168,28 @@ const MainInfoCard = () => {
         <div className="photo-grid">
           {photos.map((photo, index) => (
             <div key={index}>
-              {photo.carouselImages ? (
+              {/* {photo.carouselImages ? (
                 <div>
                   <h2>{photo.title}</h2>
                   <MainCarousel images={photo.carouselImages} />
                 </div>
-              ) : (
-                <PhotoCard
-                  // key={index}
-                  photo={photo.photo}
-                  title={photo.title}
-                  personName={photo.personName}
-                  date={photo.date}
-                  onClick={() =>
-                    openModal(
-                      photo.title,
-                      "Hier ist der Detailinhalt für " + photo.title,
-                      photo.photo
-                    )
-                  }
-                />
-              )}
+              ) : ( */}
+              <PhotoCard
+                // key={index}
+                photo={photo.photo}
+                title={photo.title}
+                personName={photo.personName}
+                date={photo.date}
+                carouselImages={photo.carouselImages}
+                onClick={() =>
+                  openModal(
+                    photo.title,
+                    "Hier ist der Detailinhalt für " + photo.title,
+                    photo.photo
+                  )
+                }
+              />
+              {/* )} */}
             </div>
           ))}
         </div>
