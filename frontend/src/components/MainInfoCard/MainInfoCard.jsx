@@ -26,9 +26,9 @@ const photos = [
     date: "Coming August 21",
     carouselImages: [
       "/images/kevin-open.webp",
-      "/images/kevin-3.webp",
       "/images/kevin-2.webp",
       "/images/kevin-4.jpeg",
+      "/images/kevin-3-3.webp",
       "/images/kevin-5.jpeg",
     ],
   },
@@ -159,17 +159,17 @@ const pastPhotos = [
     ],
   },
   {
-    photo: "/images/14-1.webp",
+    photo: "/images/14-plus-1.webp",
     title: "Drift off in the Up house",
     personName: "Carl Fredricksen",
     date: "Sold Out",
-    // carouselImages: [
-    //   "/images/14-7.jpeg",
-    //   "/images/14-6.jpeg",
-    //   "/images/14-3.webp",
-    //   "/images/14-4.webp",
-    //   "/images/14-5.webp",
-    // ],
+    carouselImages: [
+      "/images/14-plus-1.webp",
+      "/images/14-plus-2.webp",
+      "/images/14-3.webp",
+      "/images/14-4.webp",
+      "/images/14-5.webp",
+    ],
   },
   {
     photo: "/images/15-1.webp",
