@@ -3,7 +3,15 @@ import { useState } from "react";
 import "./PhotoCard.css";
 import MainCarousel from "../MainCarousel/MainCarousel";
 
-const PhotoCard = ({ photo, title, personName, date, carouselImages, onClick }) => {
+const PhotoCard = ({
+  photo,
+  title,
+  personName,
+  date,
+  carouselImages,
+  onClick,
+  liveButton,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -12,7 +20,7 @@ const PhotoCard = ({ photo, title, personName, date, carouselImages, onClick }) 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
 
-    // onClick={onClick}
+      // onClick={onClick}
     >
       {console.log(carouselImages)}
       {/* here sollt stellt MainCarousel, nicht in MainInfoCard */}
@@ -22,7 +30,16 @@ const PhotoCard = ({ photo, title, personName, date, carouselImages, onClick }) 
           <MainCarousel images={carouselImages} />
         </div>
       ) : (
-        <img src={photo} alt={title} />)}
+        <img src={photo} alt={title} />
+      )}
+      {liveButton && (
+        <div
+          className="live-button"
+          onClick={() => console.log("Live Button Clicked")}
+        >
+          Live
+        </div>
+      )}
 
       {/* {isHovered && ( */}
       <div className="download-icon" onClick={onClick}>

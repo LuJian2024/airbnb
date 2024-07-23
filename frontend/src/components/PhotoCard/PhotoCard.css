@@ -13,6 +13,22 @@
   transition: transform 0.3s;
 }
 
+.live-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #cad2d1;
+  color: #222222;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /* h2 {
   margin: 0px;
   font-size: 32px;
@@ -31,7 +47,7 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #ffffff;
+  background: #cad2d1;
   padding: 9px;
   border-radius: 50%;
   cursor: pointer;

@@ -17,6 +17,7 @@ const photos = [
       "/images/x-4.webp",
       "/images/x-5.webp",
     ],
+    liveButton: true,
   },
   {
     photo: "/images/kevin-open.webp",
@@ -287,6 +288,7 @@ const MainInfoCard = () => {
                 personName={`hosted by ${photo.personName}`}
                 date={photo.date}
                 carouselImages={photo.carouselImages}
+                liveButton={photo.liveButton}
                 onClick={() =>
                   openModal(
                     photo.title,

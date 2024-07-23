@@ -19,12 +19,20 @@
   top: 40%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.8);
+  /* background: #ffffff; */
   border: none;
   border-radius: 50%;
   cursor: pointer;
   font-size: 24px;
   padding: 10px;
   margin-bottom: 600px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-container:hover .carousel-button {
+  opacity: 1;
+  /* background: white; */
 }
 
 .carousel-button.left {
