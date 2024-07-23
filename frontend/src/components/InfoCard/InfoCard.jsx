@@ -35,7 +35,7 @@ const InfoCard = ({ catalogList }) => {
     return (
         <div className="carousel-container">
             <div className="carousel-img">
-                <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowLeft.svg' /></button>
+                <button className='prev-img' onClick={prevPictureHandler} ><img style={{ width: '12px', height: '12px' }} src='/svg/arrowLeft.svg' /></button>
                 {catalogList.image.map((imgItem, i) =>
                 (<div key={i} className={i === currentImgID ? 'carousel-slide carousel-active' : 'carousel-slide'}>
                     {/* 如果需要在新标签页打开链接，同时保持上下文状态，可以使用一种不同的方式来处理上下文数据传递。一个常见的解决方案是在点击时使用 localStorage 或 sessionStorage 存储选定的图片，然后在新标签页中读取这个数据。使用这种方法则无需使用useContext. 使用 localStorage 或 sessionStorage在点击图片时存储数据：在 InfoCard 组件中，点击图片时将数据存储到 localStorage 或 sessionStorage。在新标签页加载时读取数据：在 DetailInfos 组件中，加载时从 localStorage 或 sessionStorage 读取数据。 */}
@@ -47,7 +47,7 @@ const InfoCard = ({ catalogList }) => {
                         <img src={imgItem} alt="catalog" />
                     </button> */}
                 </div>))}
-                <button className='next-img' onClick={nextPictureHandler} ><img style={{ width: '12px' }} src='/svg/arrowRight.svg' /></button>
+                <button className='next-img' onClick={nextPictureHandler} ><img style={{ width: '12px', height: '12px' }} src='/svg/arrowRight.svg' /></button>
                 <ul className='carousel-dots'>
                     {Array(5).fill('').map((_, i) =>
                         <li key={i} className={i === currentImgID ? 'active-dot' : ''}></li>
@@ -58,9 +58,9 @@ const InfoCard = ({ catalogList }) => {
             <NavLink to="/detail" target="_blank" rel="noopener noreferrer">
                 <div className="carousel-text">
                     <h3 style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '500' }} >{catalogList.place}</h3>
-                    <p style={{ color: 'rgb(106, 106, 106)', fontSize: '15px', fontWeight: '400' }}>{catalogList.distance}</p>
+                    <p style={{ color: 'rgb(106, 106, 106)', fontSize: '15px', fontWeight: '400', padding: '3px 0' }}>{catalogList.distance}</p>
                     <p style={{ color: 'rgb(106, 106, 106)', fontSize: '15px', fontWeight: '400' }}>{catalogList.date}</p>
-                    <h3 style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '500' }}>{catalogList.price} <span style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '400' }}>night</span></h3>
+                    <h3 style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '500', paddingTop: '10px' }}>{catalogList.price} <span style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '400' }}>night</span></h3>
                 </div>
             </NavLink >
         </div>

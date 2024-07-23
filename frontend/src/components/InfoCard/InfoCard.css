@@ -2,7 +2,7 @@
      width: 316px;
      height: 400px;
      /* border: 1px solid black; */
-     border-radius: 10px;
+     /* border-radius: 10px; */
      display: flex;
      flex-direction: column;
      overflow: hidden;
@@ -29,6 +29,10 @@
      z-index: 1;
  }
 
+ .carousel-slide img {
+     border-radius: 8px;
+ }
+
  .carousel-slide.carousel-active {
      opacity: 1;
      z-index: 10;
@@ -47,6 +51,8 @@
 
  .prev-img,
  .next-img {
+     width: 32px;
+     height: 32px;
      position: absolute;
      top: 50%;
      transform: translateY(-50%);
@@ -73,7 +79,6 @@
      width: 100%;
      display: flex;
      justify-content: center;
-     /* list-style: none; */
      padding: 0;
      margin: 0;
  }
@@ -94,5 +99,6 @@
  }
 
  .carousel-text {
-     padding: 20px;
+     padding-top: 10px;
+     /* padding: 20px; */
  }

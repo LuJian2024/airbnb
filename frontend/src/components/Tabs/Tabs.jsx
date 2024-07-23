@@ -4,6 +4,7 @@ import './tabs.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 import '/svg/arrowRight.svg'
 import '/svg/arrowLeft.svg'
+import '/svg/tabsFilter.svg'
 
 const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
 
@@ -76,7 +77,7 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
     }
 
     return (
-        <div className='container'  >
+        <div className='container' style={{ display: 'flex' }} >
 
             <div className="slider-container">
 
@@ -115,7 +116,8 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
                 {currentPage < totalPages - 1 && <button className="next" onClick={nextPageHandler} ><img style={{ width: '12px' }} src='/svg/arrowRight.svg' /></button>}
 
             </div>
-
+            {selectedOption > 0 && <button className="tabs-filter" style={{ width: '86px', height: '48px' }} >
+                <img style={{ width: '16px', height: '16px' }} src='/svg/tabsFilter.svg' /><p>Filter</p></button>}
             {/* <div>Selected Option: {selectedOption}</div> */}
         </div >
 

@@ -72,13 +72,14 @@
 .text-details {
     display: flex;
     gap: 50px;
+    /* position: relative; */
 }
 
 .left-text {
     margin-top: 40px;
     flex-basis: 66%;
     border: 1px solid black;
-    height: 100vh;
+    height: 200vh;
 }
 
 .right-container {
@@ -95,23 +96,17 @@
     border-radius: 12px;
 }
 
-.right-reserve {
-    background-color: lightblue;
-    /* Example style */
-    padding: 10px;
-    /* Example style */
-    transition: top 0.3s;
-    /* Optional: smooth transition */
-}
-
 .fixed {
+    width: 360px;
     position: fixed;
     top: 0;
-    /* left: 0;
-    right: 0; */
+    /* left: 0;*/
+    /* right: 0; */
+    right: 350px;
     z-index: 1000;
-    background-color: lightblue;
+    background-color: rgb(222, 238, 245);
     /* Ensure it has the same background */
+    transition: top 0.3s;
 }
 
 .right-text {

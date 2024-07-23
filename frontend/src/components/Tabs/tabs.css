@@ -94,8 +94,10 @@
 
 
 .slider-container button {
+    width: 32px;
+    height: 32px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 10;
     background-color: #fff;
@@ -119,4 +121,22 @@
 
 .slider-container button.next {
     right: 0;
+}
+
+.tabs-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tabs-filter:hover {
+    background-color: #eee;
+    border: 1px solid black;
 }

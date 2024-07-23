@@ -15,7 +15,7 @@ const DetailInfos = () => {
 
     const targetRef = useRef(null)
     const [isFixed, setIsFixed] = useState(false)
-    const [topPosition, setTopPosition] = useState(null)
+    const [initialTopPosition, setInitialTopPosition] = useState(null)
 
     useEffect(() => {
         const storedImageList = localStorage.getItem('imageList');
@@ -30,20 +30,45 @@ const DetailInfos = () => {
         }
     }, [selectedImage]);
 
+
     const scrollHandler = () => {
-        if (targetRef.current) {
-            const topPosition = targetRef.current.getBoundingClientRect().top;
-            console.log(topPosition);
-            (topPosition <= 0) ? setIsFixed(true) : setIsFixed(false)
+        if (window.scrollY >= 800 && !isFixed) {
+            setIsFixed(true);
+        } else if (window.scrollY < 800 && isFixed) {
+            setIsFixed(false);
         }
     }
 
     useEffect(() => {
         window.addEventListener('scroll', scrollHandler);
-        // return () => {
-        //     window.removeEventListener('scroll', scrollHandler);
-        // };
-    }, []);
+        return () => {
+            window.removeEventListener('scroll', scrollHandler);
+        };
+    }, [isFixed]);
+
+    // const scrollHandler = () => {
+    //     if (targetRef.current) {
+    //         const rect = targetRef.current.getBoundingClientRect();
+    //         if (rect.top <= 0 && !isFixed) {
+    //             setIsFixed(true)
+    //         } else if (window.scrollY < initialTopPosition && isFixed) {
+    //             console.log(window.scrollY);
+    //             console.log(initialTopPosition);
+    //             setIsFixed(false)
+    //         }
+
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     if (targetRef.current) {
+    //         setInitialTopPosition(targetRef.current.offsetTop)
+    //     }
+    //     window.addEventListener('scroll', scrollHandler);
+    //     return () => {
+    //         window.removeEventListener('scroll', scrollHandler);
+    //     };
+    // }, [initialTopPosition]);
 
 
     // const { selectedImage, setSelectedImage } = useContext(AppContext)
@@ -92,10 +117,13 @@ const DetailInfos = () => {
                             <p>Image list contains {imageList.length} images.</p>
                         )} */}
                     </div>
-                    <div className="right-container">
-                        <div
-                            ref={targetRef}
-                            className={`right-reserve ${isFixed ? 'fixed' : ''}`}>
+                    <div
+                        ref={targetRef}
+                        className={`right-container ${isFixed ? 'fixed' : ''}`}
+                        style={{ top: isFixed ? `${initialTopPosition}px` : null }}>
+
+                        <div className="right-reserve">
+
                             scroll to here then fixed
                         </div>
                         <div className="right-text">
