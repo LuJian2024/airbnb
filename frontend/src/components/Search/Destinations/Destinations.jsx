@@ -14,7 +14,6 @@ const Destinations = ({ destination, setDestination }) => {
         const textDestination =
             e.currentTarget.querySelector(".grid-text").innerText;
         setDestination(textDestination);
-        // console.log(destination, "destination");
     };
 
     return (
