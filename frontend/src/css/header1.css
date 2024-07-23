@@ -1,8 +1,7 @@
 .header1 {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-
+padding: 20px;
 }
 
 .dropdown-menu.active {
@@ -115,7 +114,7 @@
   /* transform: translateX(75%); */
   z-index: 100;
   top: 180px;
-  background-color: rgb(238, 237, 237);
+  background-color: rgb(251, 250, 250);
   width: 660px;
   border-radius: 15px;
   z-index: 50;
@@ -148,13 +147,13 @@
   position: relative;
   padding: 15px;
   margin: 10px 0 10px ;
-  gap: 20px;
+ border: 1px solid rgb(208, 205, 205);
   cursor: pointer;
   border-radius: 5px;
 
 }
 .continue-button:hover{
-  color: gray;
+  background-color: rgb(228, 223, 223);
 }
 .continue-button a {
   text-decoration: none;
