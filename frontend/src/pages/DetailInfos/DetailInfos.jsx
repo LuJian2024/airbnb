@@ -15,7 +15,7 @@ const DetailInfos = () => {
 
     const targetRef = useRef(null)
     const [isFixed, setIsFixed] = useState(false)
-    const [topPosition, setTopPosition] = use
+    const [topPosition, setTopPosition] = useState(null)
 
     useEffect(() => {
         const storedImageList = localStorage.getItem('imageList');
