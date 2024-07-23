@@ -1,0 +1,5 @@
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+    gap: 10px;
+}

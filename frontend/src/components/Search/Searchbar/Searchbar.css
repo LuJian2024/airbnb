@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.search-container {
+    width: 848px;
+    height: 64px;
+    border: 1px solid #ebebeb;
+    border-radius: 32px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    font-weight: 700px;
+}
+
+.destinations,
+.guests {
+    width: 284px;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.check-in-container {
+    width: 140.5px;
+    height: 100%;
+    cursor: pointer;
+}
+.search-content {
+    width: 218px;
+    height: 36px;
+    margin: 14px 32px;
+}
+
+.search-titel {
+    height: 18px;
+}
+
+.search-input {
+    height: 18px;
+    border: none;
+    background-color: inherit;
+}
+.search-input:focus {
+    outline: none;
+}
+
+.placeholder,
+input::placeholder {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.5;
+    color: black;
+}
+/* .check-in-out-container {
+    width: 281px;
+    height: 100%;
+    display: flex;
+} */
+
+.destinations:hover,
+.check-in-container:hover,
+.guests:hover {
+    background-color: #ebebeb;
+    border-radius: 32px;
+}
+
+.search-button {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    background-color: #ff385c;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    position: relative;
+    left: -60px;
+}
+
+.search-button:hover {
+    background-color: #e11860;
+}
