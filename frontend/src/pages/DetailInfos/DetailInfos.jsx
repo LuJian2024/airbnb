@@ -5,13 +5,16 @@ import '/svg/save.svg'
 import '/svg/share.svg'
 import '/svg/diamond.svg'
 import '/svg/flag.svg'
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext } from "../../context/AppProvider";
 
 const DetailInfos = () => {
 
     const [selectedImage, setSelectedImage] = useState(null);
     const [imageList, setImageList] = useState([]);
+
+    const targetRef = useRef(null)
+    const [isFixed, setIsFixed] = useState(false)
 
     useEffect(() => {
         const storedImageList = localStorage.getItem('imageList');
@@ -25,6 +28,12 @@ const DetailInfos = () => {
             setSelectedImage(storedImage);
         }
     }, [selectedImage]);
+
+    const scrollHandler = () => {
+        if (targetRef.current) {
+            const topPosition = targetRef.current.getBoundingClientRect().top;
+        }
+    }
 
     // const { selectedImage, setSelectedImage } = useContext(AppContext)
     // const [localImage, setLocalImage] = useState(selectedImage)
