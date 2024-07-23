@@ -1,3 +1,10 @@
+.share-save span {
+    color: #222;
+    text-decoration: underline;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
 .details-container {
     max-width: 1120px;
     margin: 20px auto;

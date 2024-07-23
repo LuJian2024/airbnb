@@ -90,14 +90,14 @@ const DetailInfos = () => {
         <div className="details-container">
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
                 <h1>The picture that leaves you longing to linger</h1>
-                <div className="share-save" style={{ display: 'flex', gap: '15px' }} >
-                    <NavLink >
+                <div className="share-save" style={{ display: 'flex', gap: '20px', alignItems: 'center' }} >
+                    <NavLink style={{ display: 'flex' }} >
                         <img src='/svg/share.svg' style={{ width: '16px' }} />
-                        Share
+                        <span>Share</span>
                     </NavLink>
-                    <NavLink>
+                    <NavLink style={{ display: 'flex' }}>
                         <img src='/svg/save.svg' style={{ width: '16px' }} />
-                        Save
+                        <span>Save</span>
                     </NavLink>
                 </div>
             </header>
