@@ -32,8 +32,18 @@ const DetailInfos = () => {
     const scrollHandler = () => {
         if (targetRef.current) {
             const topPosition = targetRef.current.getBoundingClientRect().top;
+            console.log(topPosition);
+            (topPosition <= 0) ? setIsFixed(true) : setIsFixed(false)
         }
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
+        // return () => {
+        //     window.removeEventListener('scroll', scrollHandler);
+        // };
+    }, []);
+
 
     // const { selectedImage, setSelectedImage } = useContext(AppContext)
     // const [localImage, setLocalImage] = useState(selectedImage)
@@ -82,7 +92,9 @@ const DetailInfos = () => {
                         )} */}
                     </div>
                     <div className="right-container">
-                        <div className="right-reserve">
+                        <div
+                            ref={targetRef}
+                            className={`right-reserve ${isFixed ? 'fixed' : ''}`}>
                             scroll to here then fixed
                         </div>
                         <div className="right-text">

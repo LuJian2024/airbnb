@@ -57,10 +57,10 @@ const InfoCard = ({ catalogList }) => {
             {/* target="_blank": 使链接在新标签页中打开。rel="noopener noreferrer": 安全性属性，防止新页面获取对原页面的引用，推荐在使用target="_blank"时加上。 */}
             <NavLink to="/detail" target="_blank" rel="noopener noreferrer">
                 <div className="carousel-text">
-                    <h3>{catalogList.place}</h3>
-                    <p>{catalogList.distance}</p>
-                    <p>{catalogList.date}</p>
-                    <h3>{catalogList.price} <span>night</span></h3>
+                    <h3 style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '500' }} >{catalogList.place}</h3>
+                    <p style={{ color: 'rgb(106, 106, 106)', fontSize: '15px', fontWeight: '400' }}>{catalogList.distance}</p>
+                    <p style={{ color: 'rgb(106, 106, 106)', fontSize: '15px', fontWeight: '400' }}>{catalogList.date}</p>
+                    <h3 style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '500' }}>{catalogList.price} <span style={{ color: 'rgb(34, 34, 34)', fontSize: '15px', fontWeight: '400' }}>night</span></h3>
                 </div>
             </NavLink >
         </div>

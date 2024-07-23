@@ -1,6 +1,7 @@
 .details-container {
-    width: 60vw;
+    max-width: 1120px;
     margin: 20px auto;
+    width: 100%;
 }
 
 
@@ -16,7 +17,7 @@
 }
 
 .multi-pictures {
-    height: 55vh;
+
 
     display: grid;
     grid-template-areas:
@@ -24,32 +25,44 @@
         "main small3 small4";
 
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    /* 屏幕放大缩小还有问题？？？？*/
+    grid-template-rows: repeat(2, 25vh);
+    /* grid-template-rows: minmax(250px, 25vh) minmax(250px, 25vh); */
+    /* grid-template-rows: minmax(250px, 25vh); */
     gap: 10px;
+    height: 100%;
 }
 
 .picture-details.multi-pictures .detail-picture-container:nth-child(1) {
     grid-area: main;
+    /* max-height: fit-content; */
+    max-height: 500px;
 }
 
 .picture-details.multi-pictures .detail-picture-container:nth-child(2) {
     grid-area: small1;
+    max-height: 250px;
 }
 
 .picture-details.multi-pictures .detail-picture-container:nth-child(3) {
     grid-area: small2;
+    max-height: 250px;
 }
 
 .picture-details.multi-pictures .detail-picture-container:nth-child(4) {
     grid-area: small3;
+    max-height: 250px;
 }
 
 .picture-details.multi-pictures .detail-picture-container:nth-child(5) {
     grid-area: small4;
+    /* 当屏幕太大时，限制图片的高度，否则看起来会很长 */
+    max-height: 250px;
 }
 
 .single-picture,
 .picture-details.multi-pictures img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -80,6 +93,25 @@
     border: 1px solid #ccc;
     box-shadow: 1px 3px 10px #ccc;
     border-radius: 12px;
+}
+
+.right-reserve {
+    background-color: lightblue;
+    /* Example style */
+    padding: 10px;
+    /* Example style */
+    transition: top 0.3s;
+    /* Optional: smooth transition */
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    /* left: 0;
+    right: 0; */
+    z-index: 1000;
+    background-color: lightblue;
+    /* Ensure it has the same background */
 }
 
 .right-text {
