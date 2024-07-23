@@ -3,15 +3,14 @@ import "./Searchbar.css";
 import SearchItem from "./SearchItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 const Searchbar = ({
     onSearchItemClick,
     allGuestsCount,
     destination,
     fromToDates,
+    onSearchButtonClick,
 }) => {
-    let navigate = useNavigate();
     const hasGuests = Object.values(allGuestsCount).some((count) => count > 0);
     const placeholderGuests = hasGuests
         ? `${Object.entries(allGuestsCount)
@@ -57,10 +56,7 @@ const Searchbar = ({
                 onClick={onSearchItemClick}
             />
             <div>
-                <button
-                    className="search-button"
-                    onClick={() => navigate("/catalog/1/0")}
-                >
+                <button className="search-button" onClick={onSearchButtonClick}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </div>

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { today, getLocalTimeZone } from "@internationalized/date";
+import { useNavigate } from "react-router-dom";
 import "./Search.css";
 import Searchbar from "./Searchbar/Searchbar";
 import CalendarComponent from "./Calendar/Calendar";
@@ -24,6 +25,8 @@ function Search() {
     const [destination, setDestination] = useState("");
     const [fromToDates, setFromToDates] = useState();
 
+    let navigate = useNavigate();
+
     const handleOutsideClick = () => {
         console.log("dropdownCalendarVisibleRef", dropdownCalendarVisible);
         if (dropdownCalendarVisible) {
@@ -35,6 +38,18 @@ function Search() {
         if (dropdownGuestsVisible) {
             setDropdownGuestsVisible(false);
         }
+    };
+    const onSearchButtonClick = () => {
+        navigate("/catalog/1/0");
+        setDestination("");
+        setFromToDates();
+        setAllGuestsCount({
+            adults: 0,
+            children: 0,
+            infants: 0,
+            pets: 0,
+        });
+        setDropdownGuestsVisible(false);
     };
 
     useEffect(() => {
@@ -76,6 +91,7 @@ function Search() {
                     allGuestsCount={allGuestsCount}
                     destination={destination}
                     fromToDates={fromToDates}
+                    onSearchButtonClick={onSearchButtonClick}
                 />
             </div>
             <div ref={calenderWrapper} id="wrapper-ref">
