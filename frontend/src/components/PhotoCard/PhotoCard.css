@@ -5,18 +5,19 @@
   width: 315px;
   height: 329px;
   margin: 10px;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: default;
   overflow: hidden;
   border: 1px solid #ddd;
   border-radius: 8px;
   transition: transform 0.3s;
 }
 
-h2 {
+/* h2 {
   margin: 0px;
   font-size: 32px;
-  /* padding: 5px; */
-}
+      padding: 5px; 
+} */
 
 .photo-card img {
   width: 100%;
@@ -25,28 +26,25 @@ h2 {
   transition: opacity 0.3s;
 }
 
-.photo-card .download-icon {
+/* .photo-card .download-icon { */
+.download-icon {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: lightgrey;
-  padding: 5px;
-  border-radius: 5px;
+  background: #ffffff;
+  padding: 9px;
+  border-radius: 50%;
   cursor: pointer;
-  opacity: 0;
-  transition: background 0.3s, transform 0.3s, opacity 0.3s;
+  opacity: 1;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.photo-card.hovered .download-icon {
-  opacity: 1;
+/* .photo-card:hover .download-icon { */
+.download-icon:hover {
+  /* opacity: 1; */
   background: white;
   transform: scale(1.1);
 }
-
-/* .photo-info {
-  padding: 10px;
-  background: white;
-} */
 
 .photo-info {
   position: absolute;

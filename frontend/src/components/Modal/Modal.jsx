@@ -1,48 +1,57 @@
 /* eslint-disable react/prop-types */
-// import "./Modal.css";
-
-// const Modal = ({ isOpen, onClose, title, content }) => {
-//   if (!isOpen) return null;
-
-//   return (
-//     <div className="modal-overlay">
-//       <div className="modal-content">
-//         <button onClick={onClose}>X</button>
-//         <h1>Teile dieses Erlebnis</h1>
-//         <div className="image-title-container">
-//           <img
-//             width="64px"
-//             height="64px"
-//             style={{ border: "1px solid transparent", borderRadius: "5px" }}
-//             src="./images/kevin-hart.webp"
-//             alt="kevin-hart-photo"
-//           />
-//           <h2>{title}</h2>
-//         </div>
-//         <p>{content}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Modal;
-
 import "./Modal.css";
+import { useState } from "react";
 
 const Modal = ({ isOpen, onClose, title, photo }) => {
+  const [hovered, setHovered] = useState(false);
+
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button onClick={onClose}>X</button>
+        <button
+          className="close-button"
+          onClick={onClose}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          style={{
+            background: hovered ? "#F0F0F0" : "transparent",
+            border: "none",
+            borderRadius: "50%",
+            width: "30px",
+            height: "30px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+            role="presentation"
+            focusable="false"
+            style={{
+              display: "block",
+              fill: "none",
+              height: "16px",
+              width: "16px",
+              stroke: "currentcolor",
+              strokeWidth: "3",
+              overflow: "visible",
+              border: "none",
+            }}
+          >
+            <path d="m6 6 20 20M26 6 6 26"></path>
+          </svg>
+        </button>
         <h1>Teile dieses Erlebnis</h1>
         <div className="image-title-container">
           <img
             width="64px"
             height="64px"
             style={{ border: "1px solid transparent", borderRadius: "5px" }}
-            // src={"./images/kevin-hart.webp"}
             src={photo}
             alt="kevin-hart-photo"
           />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import Modal from "../../components/Modal/Modal";
+import MainCarousel from "../../components/MainCarousel/MainCarousel";
 import "./MainInfoCard.css";
 
 const photos = [
@@ -39,12 +40,26 @@ const photos = [
     title: "Event 6",
     personName: "Robert Downey Jr.",
     date: "06.01.2024",
+    carouselImages: [
+      "/images/musee.webp",
+      "/images/6-c-2.webp",
+      "/images/6-c-3.webp",
+      "/images/6-c-4.webp",
+      "/images/6-c-5.webp",
+    ],
   },
   {
     photo: "/images/bollywood.webp",
     title: "Event 7",
     personName: "Tom Holland",
     date: "07.01.2024",
+    carouselImages: [
+      "/images/bollywood.webp",
+      "/images/7-c-2.webp",
+      "/images/7-c-3.webp",
+      "/images/7-c-4.webp",
+      "/images/7-c-5.webp",
+    ],
   },
 ];
 
@@ -152,20 +167,29 @@ const MainInfoCard = () => {
       <div className="main-content">
         <div className="photo-grid">
           {photos.map((photo, index) => (
-            <PhotoCard
-              key={index}
-              photo={photo.photo}
-              title={photo.title}
-              personName={photo.personName}
-              date={photo.date}
-              onClick={() =>
-                openModal(
-                  photo.title,
-                  "Hier ist der Detailinhalt für " + photo.title,
-                  photo.photo
-                )
-              }
-            />
+            <div key={index}>
+              {photo.carouselImages ? (
+                <div>
+                  <h2>{photo.title}</h2>
+                  <MainCarousel images={photo.carouselImages} />
+                </div>
+              ) : (
+                <PhotoCard
+                  // key={index}
+                  photo={photo.photo}
+                  title={photo.title}
+                  personName={photo.personName}
+                  date={photo.date}
+                  onClick={() =>
+                    openModal(
+                      photo.title,
+                      "Hier ist der Detailinhalt für " + photo.title,
+                      photo.photo
+                    )
+                  }
+                />
+              )}
+            </div>
           ))}
         </div>
         <h2>Frühere Erlebnisse</h2>
