@@ -1,10 +1,15 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  /* align-items: center; */
+  /* text-align: center; */
   padding: 20px;
   margin: 0 auto;
+}
+
+.past-experiences {
+  font-size: 32px;
+  padding: 60px 50px 10px 10px;
 }
 
 .photo-grid {

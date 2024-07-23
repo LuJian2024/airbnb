@@ -4,6 +4,12 @@ import { useState } from "react";
 
 const Modal = ({ isOpen, onClose, title, photo }) => {
   const [hovered, setHovered] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  const handleLinkCopy = () => {
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 3000);
+  };
 
   if (!isOpen) return null;
 
@@ -24,6 +30,9 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            // position: "absolut",
+            // top: "-20px",
+            // left: "-20px",
           }}
         >
           <svg
@@ -53,13 +62,13 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             height="64px"
             style={{ border: "1px solid transparent", borderRadius: "5px" }}
             src={photo}
-            alt="kevin-hart-photo"
+            alt="photo"
           />
           <h2>{title}</h2>
         </div>
         <div className="button-container">
           <div className="button-row">
-            <button className="btn">
+            <button className="btn" onClick={handleLinkCopy}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -82,7 +91,15 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
               /> */}
               <span>Link kopieren</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() =>
+                window.open(
+                  "mailto:?subject=Betreff&body=Nachrichtentext",
+                  "_blank"
+                )
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -94,6 +111,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M32 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h28a2 2 0 0 1 2 2z"></path>
@@ -118,6 +136,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -128,7 +147,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
               </svg>
               <span>Nachrichten</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://web.whatsapp.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -140,6 +162,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -152,7 +175,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
           <div className="button-row">
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://www.messenger.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -164,6 +190,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -174,7 +201,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
               </svg>
               <span>Messenger</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://www.facebook.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -186,6 +216,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -198,7 +229,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
           <div className="button-row">
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://twitter.com", "_blank")}
+            >
               <svg
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -210,6 +244,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <g>
@@ -224,6 +259,12 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
         </div>
+        {linkCopied && (
+          <div className="link-copied-notification">
+            {/* SVG for notification icon */}
+            <span>✅ Link kopiert</span>
+          </div>
+        )}
       </div>
     </div>
   );
