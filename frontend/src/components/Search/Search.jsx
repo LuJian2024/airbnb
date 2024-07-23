@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { today, getLocalTimeZone } from "@internationalized/date";
 import "./Search.css";
 import Searchbar from "./Searchbar/Searchbar";
 import CalendarComponent from "./Calendar/Calendar";
@@ -21,6 +22,7 @@ function Search() {
         pets: 0,
     });
     const [destination, setDestination] = useState("");
+    const [fromToDates, setFromToDates] = useState();
 
     const handleOutsideClick = () => {
         console.log("dropdownCalendarVisibleRef", dropdownCalendarVisible);
@@ -73,10 +75,16 @@ function Search() {
                     onSearchItemClick={handleSearchItemClick}
                     allGuestsCount={allGuestsCount}
                     destination={destination}
+                    fromToDates={fromToDates}
                 />
             </div>
             <div ref={calenderWrapper} id="wrapper-ref">
-                {dropdownCalendarVisible && <CalendarComponent />}
+                {dropdownCalendarVisible && (
+                    <CalendarComponent
+                        fromToDates={fromToDates}
+                        setFromToDates={setFromToDates}
+                    />
+                )}
                 {dropdownDestinationsVisible && (
                     <Destinations
                         destination={destination}

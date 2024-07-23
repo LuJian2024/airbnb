@@ -128,3 +128,7 @@
     position: absolute;
     z-index: 50;
 }
+
+.grid-item-selected {
+    background-color: #ebebeb;
+}

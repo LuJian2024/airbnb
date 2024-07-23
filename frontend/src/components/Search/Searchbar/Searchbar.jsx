@@ -3,8 +3,15 @@ import "./Searchbar.css";
 import SearchItem from "./SearchItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-const Searchbar = ({ onSearchItemClick, allGuestsCount, destination }) => {
+const Searchbar = ({
+    onSearchItemClick,
+    allGuestsCount,
+    destination,
+    fromToDates,
+}) => {
+    let navigate = useNavigate();
     const hasGuests = Object.values(allGuestsCount).some((count) => count > 0);
     const placeholderGuests = hasGuests
         ? `${Object.entries(allGuestsCount)
@@ -15,6 +22,12 @@ const Searchbar = ({ onSearchItemClick, allGuestsCount, destination }) => {
     const placeholderDestinations = destination
         ? destination
         : "Search destination";
+    const placeholderCheckInDate = fromToDates?.start
+        ? fromToDates.start.toString()
+        : "Add dates";
+    const placeholderCheckOutDate = fromToDates?.end
+        ? fromToDates.end.toString()
+        : "Add dates";
     return (
         <div className="search-container">
             <SearchItem
@@ -27,13 +40,13 @@ const Searchbar = ({ onSearchItemClick, allGuestsCount, destination }) => {
             <SearchItem
                 itemType="date"
                 itemTitle="Check in"
-                placeholder="Add dates"
+                placeholder={placeholderCheckInDate}
                 onClick={onSearchItemClick}
             />
             <SearchItem
                 itemType="date"
                 itemTitle="Check out"
-                placeholder="Add dates"
+                placeholder={placeholderCheckOutDate}
                 onClick={onSearchItemClick}
             />
             <SearchItem
@@ -44,7 +57,10 @@ const Searchbar = ({ onSearchItemClick, allGuestsCount, destination }) => {
                 onClick={onSearchItemClick}
             />
             <div>
-                <button className="search-button">
+                <button
+                    className="search-button"
+                    onClick={() => navigate("/catalog/1/0")}
+                >
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </div>
