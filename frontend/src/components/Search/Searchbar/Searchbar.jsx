@@ -4,7 +4,14 @@ import SearchItem from "./SearchItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const Search = ({ onSearchItemClick }) => {
+const Searchbar = ({ onSearchItemClick, allGuestsCount }) => {
+    const hasGuests = Object.values(allGuestsCount).some((count) => count > 0);
+    const placeholder = hasGuests
+        ? `${Object.entries(allGuestsCount)
+              .filter(([key, value]) => value > 0)
+              .map(([key, value]) => `${key}: ${value}`)
+              .join(", ")}`
+        : "Add guests";
     return (
         <div className="search-container">
             <SearchItem
@@ -29,7 +36,7 @@ const Search = ({ onSearchItemClick }) => {
             <SearchItem
                 itemType="guests"
                 itemTitle="Who"
-                placeholder="Add guests"
+                placeholder={placeholder}
                 hasButton={true}
                 onClick={onSearchItemClick}
             />
@@ -42,4 +49,4 @@ const Search = ({ onSearchItemClick }) => {
     );
 };
 
-export default Search;
+export default Searchbar;

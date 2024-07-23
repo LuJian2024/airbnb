@@ -37,14 +37,14 @@
 }
 
 .react-aria-CalendarCell {
-    width: 3rem;
-    line-height: 3rem;
+    width: 48px;
+    line-height: 48px;
     text-align: center;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     cursor: default;
     outline: none;
     forced-color-adjust: none;
-    margin: 7px;
+    margin: 1px 1px;
     border: 1px solid transparent;
     border-radius: 50px;
     cursor: pointer;

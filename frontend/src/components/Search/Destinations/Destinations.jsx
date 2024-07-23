@@ -9,7 +9,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/world-map.png"
+                                src="/images/searchMaps/world-map.png"
                                 alt="map"
                             />
                         </div>
@@ -20,7 +20,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/asia-map.png"
+                                src="/images/searchMaps/asia-map.png"
                                 alt="map"
                             />
                         </div>
@@ -29,7 +29,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/ukraine-map.png"
+                                src="/images/searchMaps/ukraine-map.png"
                                 alt="map"
                             />
                         </div>
@@ -38,7 +38,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/usa-map.png"
+                                src="/images/searchMaps/usa-map.png"
                                 alt="map"
                             />
                         </div>
@@ -48,7 +48,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/italy-map.png"
+                                src="/images/searchMaps/italy-map.png"
                                 alt="map"
                             />
                         </div>
@@ -57,7 +57,7 @@ const Destinations = () => {
                     <div className="grid-item">
                         <div className="grid-img">
                             <img
-                                src="public/images/searchMaps/afrika-map.png"
+                                src="/images/searchMaps/afrika-map.png"
                                 alt="map"
                             />
                         </div>

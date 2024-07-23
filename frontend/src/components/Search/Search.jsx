@@ -14,6 +14,13 @@ function Search() {
     const [dropdownGuestsVisible, setDropdownGuestsVisible] = useState(false);
     const calenderWrapper = useRef(null);
     const searchWrapper = useRef(null);
+    const [allGuestsCount, setAllGuestsCount] = useState({
+        adults: 0,
+        children: 0,
+        infants: 0,
+        pets: 0,
+    });
+
     const handleOutsideClick = () => {
         console.log("dropdownCalendarVisibleRef", dropdownCalendarVisible);
         if (dropdownCalendarVisible) {
@@ -61,12 +68,20 @@ function Search() {
             }}
         >
             <div ref={searchWrapper}>
-                <Searchbar onSearchItemClick={handleSearchItemClick} />
+                <Searchbar
+                    onSearchItemClick={handleSearchItemClick}
+                    allGuestsCount={allGuestsCount}
+                />
             </div>
             <div ref={calenderWrapper} id="wrapper-ref">
                 {dropdownCalendarVisible && <CalendarComponent />}
                 {dropdownDestinationsVisible && <Destinations />}
-                {dropdownGuestsVisible && <Guests />}
+                {dropdownGuestsVisible && (
+                    <Guests
+                        allGuestsCount={allGuestsCount}
+                        setAllGuestsCount={setAllGuestsCount}
+                    />
+                )}
             </div>
         </div>
     );
