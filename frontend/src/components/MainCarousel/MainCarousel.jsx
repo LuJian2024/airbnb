@@ -24,7 +24,7 @@ const Carousel = ({ images }) => {
   return (
     <div className="main-carousel-container">
       {currentIndex !== 0 && (
-        <button className="carousel-button left" onClick={handlePrev}>
+        <button className="main-carousel-button left" onClick={handlePrev}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -45,11 +45,11 @@ const Carousel = ({ images }) => {
           </svg>
         </button>
       )}
-      <div className="carousel-slide">
+      <div className="main-carousel-slide">
         <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
       </div>
       {currentIndex !== images.length - 1 && (
-        <button className="carousel-button right" onClick={handleNext}>
+        <button className="main-carousel-button right" onClick={handleNext}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -70,11 +70,11 @@ const Carousel = ({ images }) => {
           </svg>
         </button>
       )}
-      <div className="carousel-dots">
+      <div className="main-carousel-dots">
         {images.map((_, index) => (
           <span
             key={index}
-            className={`dot ${index === currentIndex ? "active" : ""}`}
+            className={`main-dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => handleDotClick(index)}
           ></span>
         ))}
