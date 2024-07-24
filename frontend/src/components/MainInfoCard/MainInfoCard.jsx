@@ -270,7 +270,6 @@ const MainInfoCard = () => {
 
   return (
     <>
-
       <div className="main-content">
         <div className="photo-grid">
           {photos.map((photo, index) => (
