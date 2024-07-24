@@ -113,7 +113,7 @@ export default function Header1() {
         
           <div className="sign-up-body">
             <header>
-              <button style={{paddingTop:"30px",paddingLeft:"20px",}}
+              <button style={{paddingTop:"30px",paddingLeft:"25px",cursor:"pointer"}}
                 onClick={() => {
                   console.log("happening");
 
