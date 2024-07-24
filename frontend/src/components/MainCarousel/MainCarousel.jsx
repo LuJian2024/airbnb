@@ -22,7 +22,7 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel-container">
+    <div className="main-carousel-container">
       {currentIndex !== 0 && (
         <button className="carousel-button left" onClick={handlePrev}>
           <svg

@@ -42,7 +42,7 @@ const PhotoCard = ({
         </div>
       ) : (
 
-        // < NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)} >
+        // <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)}>
         <img src={photo} alt={title} />
         // {/* </NavLink> */}
       )
