@@ -5,15 +5,22 @@ const destinations = [
     { image: "/images/searchMaps/asia-map.png", text: "Asia" },
     { image: "/images/searchMaps/ukraine-map.png", text: "Ukraine" },
     { image: "/images/searchMaps/usa-map.png", text: "United States" },
-    { image: "/images/searchMaps/italy-map.png", text: "Italy" },
+    { image: "/images/searchMaps/norway-map.png", text: "Norway" },
     { image: "/images/searchMaps/afrika-map.png", text: "Afrika" },
 ];
 
-const Destinations = ({ destination, setDestination }) => {
+const Destinations = ({
+    destination,
+    setDestination,
+    setDropdownDestinationsVisible,
+    setDropdownCalendarVisible,
+}) => {
     const onclickHandler = (e) => {
         const textDestination =
             e.currentTarget.querySelector(".grid-text").innerText;
         setDestination(textDestination);
+        setDropdownDestinationsVisible(false);
+        setDropdownCalendarVisible(true);
     };
 
     return (

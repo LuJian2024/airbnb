@@ -105,6 +105,10 @@ function Search() {
                     <Destinations
                         destination={destination}
                         setDestination={setDestination}
+                        setDropdownDestinationsVisible={
+                            setDropdownDestinationsVisible
+                        }
+                        setDropdownCalendarVisible={setDropdownCalendarVisible}
                     />
                 )}
                 {dropdownGuestsVisible && (
