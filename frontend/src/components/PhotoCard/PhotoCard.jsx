@@ -40,13 +40,15 @@ const PhotoCard = ({
           <h2>{photo.title}</h2>
           <MainCarousel images={carouselImages} />
         </div>
-      ) : (
+      ) :
 
-        // <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)}>
-        <img src={photo} alt={title} />
-        // {/* </NavLink> */}
-      )
+        <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)}>
+          <img src={photo} alt={title} />
+        </NavLink>
+
       }
+
+
 
       {
         liveButton && (
