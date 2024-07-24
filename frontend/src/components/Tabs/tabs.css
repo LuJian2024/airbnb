@@ -14,6 +14,7 @@
 
 .slide {
     display: flex;
+    justify-content: space-between;
     flex-wrap: nowrap;
     min-width: 100%;
     /* 每个 slide 占据一个视口的宽度 */
@@ -33,7 +34,7 @@
     /* 确保每个项目不会变大 */
 
     /* version2 */
-    flex: 0 0 calc(100% / 17);
+    /* flex: 0 0 calc(100% / 16); */
 
     box-sizing: border-box;
     text-align: center;

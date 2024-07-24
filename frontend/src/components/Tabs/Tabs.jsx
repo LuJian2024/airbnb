@@ -22,7 +22,7 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
         text: tabsText[i]
 
     }))
-    const iconsPrePage = 17
+    const iconsPrePage = 16
     const totalPages = Math.ceil(tabLists.length / iconsPrePage)
 
     // // 使用 useEffect 根据 URL 路径更新 selectedOption
@@ -102,9 +102,12 @@ const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
                             <div className='tab-container'>
                                 <img src={tablist.image} style={{ maskImage: `url(${tablist.image})`, maskSize: 'cover' }} />
                                 {/* <img src={tablist.image} /> */}
-                                <span style={{ color: selectedOption === tablist.id && 'black', fontWeight: '700' }} >
+                                {/* <span style={{ color: selectedOption === tablist.id && 'black', fontWeight: '700' }} >
                                     {tablist.text}
-                                </span>
+                                </span> */}
+                                <div style={{ color: selectedOption === tablist.id && 'black', fontWeight: '700' }} >
+                                    <span style={{ paddingBottom: '10px' }} >{tablist.text}</span>
+                                </div>
                             </div>
                         </label>
                         )

@@ -6,19 +6,21 @@ import Search from "../components/Search/Search"
 const SharedLayout = () => {
     return (
         <><div className="body-part">
-            {/* nav/header */}
-            {/* <h2>Ich bin die zukünftige Navbar</h2> */}
-           <div className="menu-part"> <Menu />
-            </div>
-            <div className="search-part"><Search /></div>
-            
+            <header style={{ borderBottom: '1px solid #eee', marginBottom: '10px' }} >
+                <div className="menu-part">
+                    <Menu />
+                </div>
+                <div className="search-part">
+                    <Search />
+                </div>
+            </header>
             <div className="main-part"><main className="main-container">
                 <Outlet />
             </main>
-            <h2>Ich bin der zukünftige Footer</h2>
-            {/* footer */}
+                <h2>Ich bin der zukünftige Footer</h2>
+                {/* footer */}
             </div>
-           </div>
+        </div>
         </>
     );
 };
