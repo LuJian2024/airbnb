@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 .search-container {
-    width: 848px;
-    height: 64px;
+    width: 850px;
+    height: 66px;
     border: 1px solid #ebebeb;
     border-radius: 32px;
     margin: 20px auto;
@@ -78,6 +78,7 @@ input::placeholder {
     color: white;
     position: relative;
     left: -60px;
+    cursor: pointer;
 }
 
 .search-button:hover {

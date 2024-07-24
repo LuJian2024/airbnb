@@ -11,29 +11,9 @@ import {
     RangeCalendar,
 } from "react-aria-components";
 
-const CalendarComponent = () => {
-    /* const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
-    const formattedToday = `${today.getFullYear()}-${String(
-        today.getMonth() + 1
-    ).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
-    const formattedTomorrow = `${tomorrow.getFullYear()}-${String(
-        tomorrow.getMonth() + 1
-    ).padStart(2, "0")}-${String(tomorrow.getDate()).padStart(2, "0")}`;
-
-    const [fromToDates, setFromToDates] = useState({
-        start: parseDate(formattedToday),
-        end: parseDate(formattedTomorrow),
-    }); */
-
-    const [fromToDates, setFromToDates] = useState({
-        start: today(getLocalTimeZone()),
-        end: today(getLocalTimeZone()).add({ weeks: 0, days: 1 }),
-    });
-
-    console.log("fromToDates", fromToDates);
+const CalendarComponent = ({ fromToDates, setFromToDates }) => {
+    // console.log("fromToDates.start", fromToDates.start.toString());
+    // console.log(today(getLocalTimeZone()), "today");
     return (
         <div className="search-dropdown-container-calendar">
             <div className="date-chose-calendar-bar">
@@ -46,7 +26,7 @@ const CalendarComponent = () => {
                 aria-label="Trip dates"
                 visibleDuration={{ months: 2 }}
                 pageBehavior="single"
-                value={fromToDates}
+                value={fromToDates !== undefined ? fromToDates : null}
                 onChange={setFromToDates}
                 minValue={today(getLocalTimeZone())}
             >
@@ -78,6 +58,14 @@ const CalendarComponent = () => {
                     </CalendarGrid>
                 </div>
             </RangeCalendar>
+            <div className="add-dates-bar">
+                <div>Exact dates</div>
+                <div>+-1day</div>
+                <div>+-2days</div>
+                <div>+-3days</div>
+                <div>+-7days</div>
+                <div>+-14days</div>
+            </div>
         </div>
     );
 };

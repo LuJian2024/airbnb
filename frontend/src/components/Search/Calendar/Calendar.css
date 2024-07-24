@@ -37,14 +37,14 @@
 }
 
 .react-aria-CalendarCell {
-    width: 3rem;
-    line-height: 3rem;
+    width: 48px;
+    line-height: 48px;
     text-align: center;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     cursor: default;
     outline: none;
     forced-color-adjust: none;
-    margin: 7px;
+    margin: 1px 1px;
     border: 1px solid transparent;
     border-radius: 50px;
     cursor: pointer;
@@ -70,4 +70,25 @@
 .react-aria-CalendarCell[data-disabled]:hover {
     border-color: transparent;
     cursor: default;
+}
+
+.add-dates-bar {
+    display: flex;
+    width: 800px;
+    height: 48px;
+    gap: 10px;
+    padding: 20px 40px;
+}
+.add-dates-bar > div {
+    width: 94px;
+    height: 32px;
+    border-radius: 32px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-dates-bar > div:hover {
+    border-color: black;
 }
