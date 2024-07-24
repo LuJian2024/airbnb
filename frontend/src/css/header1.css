@@ -1,7 +1,7 @@
 .header1 {
   display: flex;
   justify-content: space-between;
-padding: 20px;
+padding-top: 20px;
 
 }
 
@@ -20,25 +20,25 @@ padding: 20px;
 }
 
 .drop {
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 243px;
   border: 1px solid rgb(189, 185, 185);
   border-radius: 10px;
   width: 280px;
   position: absolute;
   display: flex;
-  right: 20px;
-  top: 100px;
-  background-color: rgb(249, 250, 252);
+  right: 50px;
+  top: 90px;
+  background-color: white;
   list-style-type: none;
   z-index: 100;
+ box-shadow: 0px 0px 2px ;
 }
 
 .dropdownItem>button {
   background-color: inherit;
   border: none;
-  font-size: larger;
-  padding: 10px;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -50,13 +50,13 @@ padding: 20px;
   display: flex;
   margin: 5px;
   gap: 19px;
-  padding-top: 22px;
+  padding-top: 20px;
 }
 
 .air-logo {
   width: 100px;
   cursor: pointer;
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 .header1 button {
@@ -88,7 +88,7 @@ padding: 20px;
 .login {
 
   border-radius: 50px;
-  margin: -7px;
+  
 }
 
 .close {
