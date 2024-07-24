@@ -16,22 +16,21 @@ const PhotoCard = ({
   liveButton,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const { setSelectedImage } = useContext(AppContext)
+  const { setSelectedImage } = useContext(AppContext);
 
   const imageClickHandler = (imgItem) => {
-    setSelectedImage(imgItem)
-    localStorage.setItem('selectedImage', imgItem) //use localStorage
-    localStorage.setItem('imageList', JSON.stringify('')); //Forcibly set to null to select only the current image
-  }
+    setSelectedImage(imgItem);
+    localStorage.setItem("selectedImage", imgItem); //use localStorage
+    localStorage.setItem("imageList", JSON.stringify("")); //Forcibly set to null to select only the current image
+  };
 
   return (
-
     <div
       className={`photo-card ${isHovered ? "hovered" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
 
-    // onClick={onClick}
+      // onClick={onClick}
     >
       {console.log(carouselImages)}
       {/* here sollt stellt MainCarousel, nicht in MainInfoCard */}
@@ -40,26 +39,25 @@ const PhotoCard = ({
           <h2>{photo.title}</h2>
           <MainCarousel images={carouselImages} />
         </div>
-      ) :
-
-        <NavLink to="/detail" target="_blank" rel="noopener noreferrer" onClick={() => imageClickHandler(photo)}>
+      ) : (
+        <NavLink
+          to="/detail"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => imageClickHandler(photo)}
+        >
           <img src={photo} alt={title} />
         </NavLink>
+      )}
 
-      }
-
-
-
-      {
-        liveButton && (
-          <div
-            className="live-button"
-            onClick={() => console.log("Live Button Clicked")}
-          >
-            Live
-          </div>
-        )
-      }
+      {liveButton && (
+        <div
+          className="live-button"
+          onClick={() => console.log("Live Button Clicked")}
+        >
+          Live
+        </div>
+      )}
 
       {/* {
   isHovered && ( */}
@@ -94,8 +92,8 @@ const PhotoCard = ({
         <div className="person">{personName}</div>
         <div className="date">{date}</div>
       </div>
-    </div >
+    </div>
   );
-}
+};
 
 export default PhotoCard;
