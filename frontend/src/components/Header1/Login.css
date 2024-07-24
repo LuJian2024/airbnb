@@ -1,0 +1,19 @@
+label {
+    display: block;
+  
+  }
+  
+  input {
+    border: 1px solid;
+    border-radius: var(--radius);
+    margin: .5em;
+    width: 100px;
+  }
+  
+  .error {
+    background: #faa;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: .3rem;
+    border-radius: var(--radius);
+  }

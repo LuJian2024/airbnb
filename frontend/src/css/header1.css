@@ -1,8 +1,7 @@
 .header1 {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-
+padding: 20px;
 }
 
 .dropdown-menu.active {
@@ -29,12 +28,12 @@
   display: flex;
   right: 20px;
   top: 100px;
-  background-color: aliceblue;
+  background-color: rgb(249, 250, 252);
   list-style-type: none;
   z-index: 100;
 }
 
-.drop button {
+.dropdownItem>button {
   background-color: inherit;
   border: none;
   font-size: larger;
@@ -42,7 +41,7 @@
   cursor: pointer;
 }
 
-.drop button:hover {
+.dropdownItem>button:hover {
   background-color: rgb(243, 242, 242);
 }
 
@@ -94,20 +93,33 @@
 .close {
   background-color: inherit;
   border: none;
+  justify-content: space-between;
+}
+.sign-up-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
 }
 
-
 .sign-up-body {
-  /* position: absolute; */
   position: absolute;
   margin: 0 auto;
-  transform: translateX(75%);
-  z-index: 30;
-
-  background-color: rgb(246, 244, 238);
-  width: 35%;
+  /* transform: translateX(75%); */
+  z-index: 100;
+  top: 180px;
+  background-color: rgb(251, 250, 250);
+  width: 660px;
   border-radius: 15px;
   z-index: 50;
+  border-block-start-width: 0;
+  
 }
 
 .sing-up-body header {
@@ -116,7 +128,7 @@
   padding: 20px;
 }
 
-.sing-up-body input {
+.sign-up-body input {
   width: 100%;
   padding: 15px;
   border-radius: 5px;
@@ -127,16 +139,22 @@
 .input-body {
   padding: 30px;
 
+
 }
 
 .continue-button {
   width: 100%;
+  position: relative;
   padding: 15px;
-  margin: 8px;
+  margin: 10px 0 10px ;
+ border: 1px solid rgb(208, 205, 205);
   cursor: pointer;
+  border-radius: 5px;
 
 }
-
+.continue-button:hover{
+  background-color: rgb(228, 223, 223);
+}
 .continue-button a {
   text-decoration: none;
   color: black;
