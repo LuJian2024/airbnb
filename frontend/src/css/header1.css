@@ -33,7 +33,7 @@ padding: 20px;
   z-index: 100;
 }
 
-.drop button {
+.dropdownItem>button {
   background-color: inherit;
   border: none;
   font-size: larger;
@@ -41,7 +41,7 @@ padding: 20px;
   cursor: pointer;
 }
 
-.drop button:hover {
+.dropdownItem>button:hover {
   background-color: rgb(243, 242, 242);
 }
 

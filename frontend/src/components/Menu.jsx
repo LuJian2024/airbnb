@@ -113,7 +113,7 @@ export default function Header1() {
         
           <div className="sign-up-body">
             <header>
-              <button style={{position:"relative",left:"20px",top:"20px"}}
+              <button style={{paddingTop:"30px",paddingLeft:"20px",}}
                 onClick={() => {
                   console.log("happening");
 
@@ -122,11 +122,9 @@ export default function Header1() {
                 className="close">
                 <FontAwesomeIcon  icon={faXmark} />
               </button>
-              <h3 style={{textAlign:"center",position:"relative",top:"-5px"}}>Log in or sign up</h3>
+              <h3 style={{paddingBottom:"20px",borderBottom:"1px solid rgb(189, 185, 185",textAlign:"center",position:"relative",top:"-5px"}}>Log in or sign up</h3>
             </header>
-            <p style={{ color: "rgb(189, 185, 185)" }}>
-              ___________________________________________________________________________
-            </p>
+            
             <div className="input-body">
               <h1 style={{ padding: "10px" }}>Welcome to Airbnb</h1>
               <input type="text" placeholder="Country code" />
