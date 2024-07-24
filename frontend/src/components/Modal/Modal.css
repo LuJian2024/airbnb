@@ -1,3 +1,23 @@
+.modal-content button {
+  width: 250px;
+  height: 48px;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  padding: 15px;
+  background: #ffffff;
+  color: #252525;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close-button:hover {
+  background: grey;
+  border-radius: 50%;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -13,35 +33,23 @@
 .modal-content {
   background: white;
   color: #222222;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
+  padding: 25px;
+  border-radius: 10px;
+  /* width: 80%;
+  max-width: 600px; */
+  width: 568px;
+  height: 480px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   display: flex;
-  /* justify-content: space-around; */
   flex-direction: column;
   position: relative;
   text-align: left;
 }
 
 .modal-content h1 {
-  margin-top: 0;
-}
-
-.modal-content button {
-  width: 250px;
-  height: 48px;
-  align-self: flex-start;
-  /* justify-content: space-around; */
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #ffffff;
-  color: black;
-  border: 1px solid grey;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
+  color: #222222;
+  font-size: 26px;
+  margin-top: 15px;
 }
 
 .modal-content button:hover {
@@ -50,42 +58,72 @@
 
 .image-title-container {
   display: flex;
+  gap: 20px;
   align-items: center;
   margin-top: 20px;
+}
+
+.image-title-container h2 {
+  color: #222222;
+  font-size: 16px;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(34, 34, 34);
 }
 
 .button-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .button-row:last-child {
   justify-content: flex-start;
-  margin-left: 25px;
+  /* margin-left: 5px; */
+  margin-bottom: 20px;
 }
 
-.btn {
-  /* flex: 1; */
+.button-row button {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 10px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-.btn:hover {
-  background: #0056b3;
+.link-copied-notification {
+  position: fixed;
+  bottom: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  color: rgb(34, 34, 34);
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  /* animation: fadeOut 2s forwards; */
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

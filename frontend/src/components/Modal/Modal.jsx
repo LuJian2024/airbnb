@@ -1,56 +1,74 @@
 /* eslint-disable react/prop-types */
-// import "./Modal.css";
-
-// const Modal = ({ isOpen, onClose, title, content }) => {
-//   if (!isOpen) return null;
-
-//   return (
-//     <div className="modal-overlay">
-//       <div className="modal-content">
-//         <button onClick={onClose}>X</button>
-//         <h1>Teile dieses Erlebnis</h1>
-//         <div className="image-title-container">
-//           <img
-//             width="64px"
-//             height="64px"
-//             style={{ border: "1px solid transparent", borderRadius: "5px" }}
-//             src="./images/kevin-hart.webp"
-//             alt="kevin-hart-photo"
-//           />
-//           <h2>{title}</h2>
-//         </div>
-//         <p>{content}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Modal;
-
 import "./Modal.css";
+import { useState } from "react";
 
 const Modal = ({ isOpen, onClose, title, photo }) => {
+  const [hovered, setHovered] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  const handleLinkCopy = () => {
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 3000);
+  };
+
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button onClick={onClose}>X</button>
-        <h1>Teile dieses Erlebnis</h1>
+        <button
+          className="close-button"
+          onClick={onClose}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          style={{
+            background: hovered ? "#F0F0F0" : "transparent",
+            border: "none",
+            borderRadius: "50%",
+            width: "30px",
+            height: "30px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // position: "absolut",
+            // top: "-20px",
+            // left: "-20px",
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+            role="presentation"
+            focusable="false"
+            style={{
+              display: "block",
+              fill: "none",
+              height: "16px",
+              width: "16px",
+              stroke: "currentcolor",
+              strokeWidth: "3",
+              overflow: "visible",
+              border: "none",
+            }}
+          >
+            <path d="m6 6 20 20M26 6 6 26"></path>
+          </svg>
+        </button>
+        <h1>Share this experience</h1>
         <div className="image-title-container">
           <img
             width="64px"
             height="64px"
             style={{ border: "1px solid transparent", borderRadius: "5px" }}
-            // src={"./images/kevin-hart.webp"}
             src={photo}
-            alt="kevin-hart-photo"
+            alt="photo"
           />
           <h2>{title}</h2>
         </div>
         <div className="button-container">
           <div className="button-row">
-            <button className="btn">
+            <button className="btn" onClick={handleLinkCopy}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -71,9 +89,17 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                 src="./icons/link-copy-icon.png"
                 alt="Link kopieren"
               /> */}
-              <span>Link kopieren</span>
+              <span>Copy Link</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() =>
+                window.open(
+                  "mailto:?subject=Betreff&body=Nachrichtentext",
+                  "_blank"
+                )
+              }
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -85,6 +111,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M32 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h28a2 2 0 0 1 2 2z"></path>
@@ -93,7 +120,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   d="M7.01 9.1c-.17 0-.33.03-.48.09l3.01 3.1 3.05 3.15.05.07.1.09.08.09.18.19 2.61 2.68c.04.02.17.14.27.19.13.06.26.12.4.13.16 0 .31-.04.45-.11.1-.05.15-.12.27-.21l3.02-3.13 3.06-3.14 2.94-3.03a1.3 1.3 0 0 0-.62-.16zm-.92.38c-.32.3-.52.76-.52 1.28v10.17c0 .42.13.8.35 1.1l.42-.4 3.15-3.06 2.79-2.7-.06-.07-3.05-3.14L6.1 9.5zm20.33.1-2.98 3.08-3.04 3.14-.06.06 2.9 2.8 3.15 3.06.19.18c.17-.27.26-.6.26-.97V10.76c0-.46-.16-.88-.42-1.18zm-13.79 6.65-2.77 2.7L6.7 22l-.4.39c.21.13.45.22.71.22H25.4c.31 0 .6-.12.83-.31l-.2-.2-3.15-3.06-2.9-2.8-2.61 2.7c-.14.09-.24.19-.38.25-.22.1-.46.2-.7.19-.25 0-.5-.1-.71-.2-.11-.06-.17-.12-.3-.23z"
                 ></path>
               </svg>
-              <span>Per E-Mail senden</span>
+              <span> Email </span>
             </button>
           </div>
           <div className="button-row">
@@ -109,6 +136,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -117,9 +145,12 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   d="M15.8 5.47c-6.4 0-11.6 4.32-11.6 9.66 0 3.39 2.14 6.52 5.63 8.27a9.16 9.16 0 0 1-2.02 2.83c1.71-.3 3.33-.93 4.7-1.85 1.07.27 2.18.4 3.29.4 6.4 0 11.6-4.32 11.6-9.65 0-5.34-5.2-9.66-11.6-9.66z"
                 ></path>
               </svg>
-              <span>Nachrichten</span>
+              <span>Messages</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://web.whatsapp.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -131,6 +162,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -143,7 +175,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
           <div className="button-row">
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://www.messenger.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -155,6 +190,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -165,7 +201,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
               </svg>
               <span>Messenger</span>
             </button>
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://www.facebook.com", "_blank")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -177,6 +216,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <path d="M30 0a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"></path>
@@ -189,7 +229,10 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
           <div className="button-row">
-            <button className="btn">
+            <button
+              className="btn"
+              onClick={() => window.open("https://twitter.com", "_blank")}
+            >
               <svg
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
@@ -201,6 +244,7 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
                   height: "20px",
                   width: "20px",
                   fill: "currentcolor",
+                  borderRadius: "20%",
                 }}
               >
                 <g>
@@ -215,6 +259,12 @@ const Modal = ({ isOpen, onClose, title, photo }) => {
             </button>
           </div>
         </div>
+        {linkCopied && (
+          <div className="link-copied-notification">
+            {/* SVG for notification icon */}
+            <span>✅ Link copied</span>
+          </div>
+        )}
       </div>
     </div>
   );
