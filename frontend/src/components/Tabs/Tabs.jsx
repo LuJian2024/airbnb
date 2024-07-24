@@ -6,6 +6,7 @@ import '/svg/arrowRight.svg'
 import '/svg/arrowLeft.svg'
 import '/svg/tabsFilter.svg'
 
+// 接受从Catalog 路径那里传来的参数params
 const Tabs = ({ initialTabID = 0, initialPage = 0 }) => {
 
     const [selectedOption, setSelectedOption] = useState(initialTabID);

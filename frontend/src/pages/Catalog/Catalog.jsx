@@ -12,6 +12,7 @@ const Catalog = () => {
     return (
         <div>
             <Tabs initialTabID={parseInt(tabID, 10)} initialPage={parseInt(page, 10)} />
+            {/* 之后会根据不同的tabID，显示对应的页面结构和内容 */}
             <div className="catalog-container">
                 {catalogCardLists.map((catalogList, i) =>
                     <InfoCard key={i} catalogList={catalogList} />
