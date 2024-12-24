@@ -17,13 +17,7 @@ Unser Ziel war es, die grundlegenden Funktionen und das Design der Airbnb-Websit
 - ⚙️ **Clientseitige Logik** integrieren, um die Anwendung interaktiv zu gestalten.
 
 
-# 🌟 Nachbau der Airbnb-Seite – Unsere erste Single Page Application
-
-Willkommen bei unserem Projekt, dem Nachbau der **Airbnb-Seite**, erstellt im Rahmen des Moduls **"Single Page Applications"** unseres Webentwickler-Kurses. 🚀
-
-Für dieses Projekt haben wir die **momentane Struktur und Funktionen der Airbnb-Website analysiert** und sie in einer vereinfachten Form nachgebaut. In diesem Modul haben wir die Grundlagen moderner Webentwicklung gelernt, mit einem besonderen Fokus auf die Erstellung interaktiver Single Page Applications (SPAs). 💻 
-
-Unser Projekt wurde mit **React** entwickelt, um dynamische Inhalte effizient zu laden und eine nahtlose Benutzererfahrung zu ermöglichen. Dieses erste SPA-Projekt stellt einen wichtigen Meilenstein in unserem Lernprozess dar und bildet die Basis für komplexere Anwendungen in der Zukunft. 🌍
+[Screencast from 24.12.2024 12:09:53.webm](https://github.com/user-attachments/assets/6066476b-d1da-4d06-aaf1-16c814c40009)
 
 ---
 
