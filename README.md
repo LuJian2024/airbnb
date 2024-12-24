@@ -19,6 +19,18 @@ Unser Ziel war es, die grundlegenden Funktionen und das Design der Airbnb-Websit
 
 [Screencast from 24.12.2024 12:09:53.webm](https://github.com/user-attachments/assets/6066476b-d1da-4d06-aaf1-16c814c40009)
 
+## 🛠️ Verwendete Technologien
+
+In diesem Projekt haben wir folgende Technologien eingesetzt:
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![API](https://img.shields.io/badge/API_Integration-1E90FF?style=for-the-badge&logo=api&logoColor=white)
+
 ---
 
 ## 🚀 Projekt lokal ausführen
