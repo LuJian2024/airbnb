@@ -34,7 +34,7 @@ Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
 1. **Repository klonen**  
    Klonen Sie das Repository mit folgendem Befehl:
    ```bash
-   git clone
+   git clone https://github.com/LuJian2024/airbnb.git
    
 2. **In den Frontend-Ordner wechseln**
    ```bash
