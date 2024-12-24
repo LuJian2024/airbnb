@@ -31,6 +31,16 @@ In diesem Projekt haben wir folgende Technologien eingesetzt:
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![API](https://img.shields.io/badge/API_Integration-1E90FF?style=for-the-badge&logo=api&logoColor=white)
 
+
+- **React** 🌟: Für die Erstellung der Benutzeroberfläche und die Verwaltung des Zustands.
+- **Vite** ⚡: Als Build-Tool für schnelle Entwicklungsumgebungen.
+- **HTML5** 🖋️: Für die Grundstruktur der Seite.
+- **CSS3** 🎨: Für das Design und die visuelle Gestaltung.
+- **JavaScript (ES6+)** 🛠️: Für die Logik und die Interaktivität der Anwendung.
+- **React Router** 🚏: Für das Routing und die Navigation innerhalb der Single Page Application.
+- **API-Integration** 🌐: Um externe Daten in die Anwendung einzubinden.
+
+
 ---
 
 ## 🚀 Projekt lokal ausführen
