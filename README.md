@@ -1,6 +1,20 @@
-# Fullstack Template Repo
 
-This is a template to quickly create a fullstack application project.
+
+# 🌟 Nachbau der Airbnb-Seite – Unsere erste Single Page Application
+
+Willkommen bei unserem Projekt, dem Nachbau der **Airbnb-Seite**, erstellt im Rahmen des Moduls **"Single Page Applications"** unseres Webentwickler-Kurses. 🚀
+
+In diesem Modul haben wir die Grundlagen moderner Webentwicklung gelernt, mit einem besonderen Fokus auf die Erstellung interaktiver Single Page Applications (SPAs). 💻 
+
+Unser Projekt wurde mit **React** entwickelt, um dynamische Inhalte effizient zu laden und eine nahtlose Benutzererfahrung zu ermöglichen. Dieses erste SPA-Projekt stellt einen wichtigen Meilenstein in unserem Lernprozess dar und bildet die Basis für komplexere Anwendungen in der Zukunft. 🌍
+
+## 🔑 Ziele des Projekts:
+Unser Ziel war es, die grundlegenden Funktionen und das Design der Airbnb-Website nachzubauen, indem wir:
+- ✨ **JavaScript** intensiv nutzen, um dynamische Inhalte zu laden und eine nahtlose Benutzererfahrung zu schaffen.
+- 🛠️ Den Fokus auf **Strukturierung des Codes** legen.
+- 🔄 **Routing** implementieren, um unterschiedliche Seiten anzuzeigen.
+- 🌐 Mit **API-Daten** arbeiten, um reale Daten einzubinden.
+- ⚙️ **Clientseitige Logik** integrieren, um die Anwendung interaktiv zu gestalten.
 
 ### Frontend
 
