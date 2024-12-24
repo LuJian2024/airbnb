@@ -16,24 +16,41 @@ Unser Ziel war es, die grundlegenden Funktionen und das Design der Airbnb-Websit
 - 🌐 Mit **API-Daten** arbeiten, um reale Daten einzubinden.
 - ⚙️ **Clientseitige Logik** integrieren, um die Anwendung interaktiv zu gestalten.
 
-### Frontend
 
-Created with `npm create vite@latest` on July 17th 2024
+# 🌟 Nachbau der Airbnb-Seite – Unsere erste Single Page Application
 
--   Initial Dependencies included: `react-router-dom`
--   Basic initial folder structure and routing created
-    -   delete `placeholder` files and add your folders/files if needed
+Willkommen bei unserem Projekt, dem Nachbau der **Airbnb-Seite**, erstellt im Rahmen des Moduls **"Single Page Applications"** unseres Webentwickler-Kurses. 🚀
 
-After creating a new repo from this template and cloningt the new rep, remember to:
+Für dieses Projekt haben wir die **momentane Struktur und Funktionen der Airbnb-Website analysiert** und sie in einer vereinfachten Form nachgebaut. In diesem Modul haben wir die Grundlagen moderner Webentwicklung gelernt, mit einem besonderen Fokus auf die Erstellung interaktiver Single Page Applications (SPAs). 💻 
 
--   navigate inside the repository folder, into the frontend folder with `cd frontend`
-    -   then execute `npm install` in the Terminal to install all dependencies
-        -   add more dependencies if you need to
-    -   then execute `npm run dev` in the Terminal to start the development Server
+Unser Projekt wurde mit **React** entwickelt, um dynamische Inhalte effizient zu laden und eine nahtlose Benutzererfahrung zu ermöglichen. Dieses erste SPA-Projekt stellt einen wichtigen Meilenstein in unserem Lernprozess dar und bildet die Basis für komplexere Anwendungen in der Zukunft. 🌍
 
-### Backend
+---
 
-To be added at the end of the backend module
+## 🚀 Projekt lokal ausführen
+
+Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
+
+1. **Repository klonen**  
+   Klonen Sie das Repository mit folgendem Befehl:
+   ```bash
+   git clone
+   
+2. **In den Frontend-Ordner wechseln**
+   ```bash
+   cd frontend
+
+3. **Abhängigkeiten installieren**
+   ```bash
+   npm install
+4. **Entwicklungsserver starten**
+   ```bash
+   npm run dev
+
+5. **Projekt im Browser öffnen**
+
+   Öffnen Sie die angezeigte URL (normalerweise http://localhost:5173) in Ihrem Browser, um die Anwendung anzusehen. 🌐
+ 
 
 ## 👩‍💻 Unser Team und die Kontaktdaten
 
