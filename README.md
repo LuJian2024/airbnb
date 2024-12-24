@@ -4,7 +4,7 @@
 
 Willkommen bei unserem Projekt, dem Nachbau der **Airbnb-Seite**, erstellt im Rahmen des Moduls **"Single Page Applications"** unseres Webentwickler-Kurses. 🚀
 
-In diesem Modul haben wir die Grundlagen moderner Webentwicklung gelernt, mit einem besonderen Fokus auf die Erstellung interaktiver Single Page Applications (SPAs). 💻 
+Für dieses Projekt haben wir die **momentane Struktur und Funktionen der Airbnb-Website analysiert** und nachgebaut. In diesem Modul haben wir die Grundlagen moderner Webentwicklung gelernt, mit einem besonderen Fokus auf die Erstellung interaktiver Single Page Applications (SPAs). 💻
 
 Unser Projekt wurde mit **React** entwickelt, um dynamische Inhalte effizient zu laden und eine nahtlose Benutzererfahrung zu ermöglichen. Dieses erste SPA-Projekt stellt einen wichtigen Meilenstein in unserem Lernprozess dar und bildet die Basis für komplexere Anwendungen in der Zukunft. 🌍
 
