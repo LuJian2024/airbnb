@@ -1,4 +1,3 @@
----
 
 # 🌟 Nachbau der Airbnb-Seite – Unsere erste Single Page Application
 
@@ -97,3 +96,10 @@ Unser Team wird durch charakteristische Tiere aus unseren Herkunftsländern repr
   [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julijana-uneva-b28a751b5) 
   [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JulijanaUneva) 
   [![E-Mail](https://img.shields.io/badge/-E--Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julijana3uneva@gmail.com) 
+
+
+---    
+
+Danke, dass du unser Projekt angeschaut hast! 🎉  
+Bis bald,  
+Das Lala Team 🚀
