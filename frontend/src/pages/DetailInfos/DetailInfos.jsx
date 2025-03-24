@@ -111,11 +111,11 @@ const DetailInfos = () => {
                         {selectedImage ? <img src={selectedImage} alt="Selected" className="single-picture" /> : <p>No image selected</p>}
                     </div>)}
 
-                <div className="text-details">
+                {/* <div className="text-details">
                     <div className="left-text">
-                        {/* {imageList.length > 0 && (
+                        {imageList.length > 0 && (
                             <p>Image list contains {imageList.length} images.</p>
-                        )} */}
+                        )}
                     </div>
                     <div
                         ref={targetRef}
@@ -140,7 +140,7 @@ const DetailInfos = () => {
                             </NavLink>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </main>
         </div>
     );

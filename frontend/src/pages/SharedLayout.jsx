@@ -17,7 +17,7 @@ const SharedLayout = () => {
             <div className="main-part"><main className="main-container">
                 <Outlet />
             </main>
-                <h2>Ich bin der zukünftige Footer</h2>
+                {/* <h2>Ich bin der zukünftige Footer</h2> */}
                 {/* footer */}
             </div>
         </div>
