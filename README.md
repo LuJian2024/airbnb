@@ -76,7 +76,7 @@ Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
 ## 👩‍💻 Unser Team und die Kontaktdaten
 
 
-Hier findest du die Namen unserer Teammitglieder sowie die Kontaktdaten für Rückfragen oder weitere Informationen. 📞✉️  
+Hier findest du die Namen unserer Teammitglieder sowie die Kontaktdaten für Rückfragen oder weitere Informationen. ✉️  
 
   **Alex**  
   [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-nezhad-2517a6322) 
